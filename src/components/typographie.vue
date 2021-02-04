@@ -16,7 +16,7 @@
     </div>
     <div>
       <h3>Communication institutionnelle</h3>
-      <p>La typographie <a href="https://www.linotype.com/fr/620/itc-conduit-famille.html">Conduit ITC Std</a> a été utilisée pour composer notre logo, elle reste la typographie officielle de la communication institutionnelle de Centrale Marseille (nottamment sur les supports papiers). Mais la licence ne permet pas une installation sur tous les postes de l'école. Si elle n'est pas sur votre poste, merci d'utiliser la Barlow comme typographie de substitution.</p>
+      <p>La typographie <a href="https://www.linotype.com/fr/620/itc-conduit-famille.html">Conduit ITC Std</a> a été utilisée pour composer notre logo, elle reste la typographie officielle de la communication institutionnelle de Centrale Marseille (notamment sur les supports papiers). Mais la licence ne permet pas une installation sur tous les postes de l'école. Si elle n'est pas sur votre poste, merci d'utiliser la Barlow comme typographie de substitution.</p>
       <div>
         <vue-plyr>
           <video>
