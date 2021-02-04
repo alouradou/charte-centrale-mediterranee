@@ -210,12 +210,10 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .txt-disabled {
   color: $color-beta;
-  cursor: not-allowed;
 }
 
 .neutral {
   background: $color-alternate-5;
-  cursor: not-allowed;
   &:hover {
     background: $color-alternate-5b;
   } 
@@ -223,7 +221,6 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .txt-neutral {
   color: $color-alternate-5;
-  cursor: not-allowed;
 }
 
 

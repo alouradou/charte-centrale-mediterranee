@@ -30,7 +30,7 @@
       </div>
       <div class="text">
         <h3>Positionnement</h3>
-        <p>L’école d’ingénieurs engagée qui forme et transforme</p>
+        <p>L’école d’ingénieurs engagée qui forme et transforme.</p>
         <h3>Valeurs</h3>
         <ul>
           <li>L'exigence</li>
@@ -55,7 +55,7 @@
           <li>Développer la recherche et sa valorisation à l’échelle internationale et diffuser la culture scientifique</li>
           <li>Assurer notre mission de service public et fonder toutes nos actions sur les trois piliers : </li>
           <ul>
-            <li>Esprit d’Innovation</li>
+            <li>Esprit d’innovation</li>
             <li>Responsabilité Sociétale et Environnementale</li>
             <li>Ouverture et coopération</li>
           </ul>
