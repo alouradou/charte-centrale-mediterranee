@@ -15,13 +15,13 @@
               <router-link to="/">La marque Centrale Marseille</router-link>
             </li>
             <li>
-              <router-link to="/fondation">La fondation</router-link>
+              <router-link disabled to="/fondation">La fondation</router-link>
             </li>
             <li>
-              <router-link to="/alumni">Alumni</router-link>
+              <router-link disabled to="/alumni">Alumni</router-link>
             </li>
             <li>
-              <router-link to="/exectutive-education">Executive Education</router-link>
+              <router-link disabled to="/exectutive-education">Executive Education</router-link>
             </li>
 <!--             <li>
               <router-link to="/deck">Le deck</router-link>
