@@ -165,9 +165,6 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .text-valid {
   color: $color-alternate-1;
-  &:hover {
-    color: $color-alternate-1b;
-  }
 }
 
 .info {
@@ -179,9 +176,6 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .text-info {
   color: $color-alternate-2;
-  &:hover {
-    color: $color-alternate-2b;
-  }
 }
 
 .important {
@@ -193,9 +187,6 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .text-important {
   color: $color-alternate-3;
-  &:hover {
-    color: $color-alternate-3b;
-  }
 }
 
 .warning {
@@ -207,9 +198,6 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 .text-warning {
   color: $color-alternate-4;
-  &:hover {
-    color: $color-alternate-4b;
-  }
 }
 
 .disabled {
@@ -223,10 +211,23 @@ p, li, h1, h2, h3, h4, h5, h6 {
 .txt-disabled {
   color: $color-beta;
   cursor: not-allowed;
-  &:hover {
-    color: $color-beta;
-  }  
 }
+
+.neutral {
+  background: $color-alternate-5;
+  cursor: not-allowed;
+  &:hover {
+    background: $color-alternate-5b;
+  } 
+}
+
+.txt-neutral {
+  color: $color-alternate-5;
+  cursor: not-allowed;
+}
+
+
+
 
 .clear {
   clear: both;

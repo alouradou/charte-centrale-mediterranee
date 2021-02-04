@@ -109,13 +109,15 @@ $color-gradient-alpha: linear-gradient(
 );
 
 $color-alternate-1: #128c38; // less used colors
-$color-alternate-1b: #3c8452;
+$color-alternate-1b: darken($color-alternate-1, 12%);
 $color-alternate-2: #61348a;
-$color-alternate-2b: #6a5082;
+$color-alternate-2b: darken($color-alternate-2, 12%);
 $color-alternate-3: #f7af17;
-$color-alternate-3b: #c1983f;
+$color-alternate-3b: darken($color-alternate-3, 12%);
 $color-alternate-4: #dc162f;
-$color-alternate-4b: #b23f4d;
+$color-alternate-4b: darken($color-alternate-4, 12%);
+$color-alternate-5: #2487b9;
+$color-alternate-5b: darken($color-alternate-5, 12%);
 
 // Links
 $link-decoration: none;

@@ -8,6 +8,7 @@
       <p>Un gris en contrepoint met en valeur le bleu, engage notre sérieux, notre sobriété et apporte une touche design.</p>
     </div>
     <div>
+      <h3>Teintes principales</h3>
       <table class="nuancier">
         <thead>
           <tr>
@@ -39,6 +40,43 @@
             <td>100, 90, 12, 2</td>
             <td>0, 15, 159</td>
             <td>#000f9f</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Teintes secondaires</h3>
+      <table class="nuancier">
+        <thead>
+          <tr>
+            <th>Teinte</th>
+            <th>RVB</th>
+            <th>#Hex</th>
+          </tr>
+        </thead>
+        <tbody class="text-smaller">
+          <tr>
+            <td class="valid"></td>
+            <td>18, 140, 56</td>
+            <td>#128c38</td>
+          </tr>
+          <tr>
+            <td class="warning"></td>
+            <td>220, 22, 47</td>
+            <td>#dc162f</td>
+          </tr>
+          <tr>
+            <td class="important"></td>
+            <td>247, 175, 23</td>
+            <td>#f7af17</td>
+          </tr>
+          <tr>
+            <td class="info"></td>
+            <td>97, 52, 138</td>
+            <td>#61348a</td>
+          </tr>
+          <tr>
+            <td class="neutral"></td>
+            <td>36, 135, 185</td>
+            <td>#2487b9</td>
           </tr>
         </tbody>
       </table>
