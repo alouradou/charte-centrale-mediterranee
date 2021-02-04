@@ -6,7 +6,7 @@
     <div>
       <ul>
         <li><a href="" disabled>Word</a> <span class="text-smaller">(à venir)</span></li>
-        <li><a href="" disabled>PowerPoint</a> <span class="text-smaller">(à venir)</span></li>
+        <li><a href="https://com.centrale-marseille.fr/charte_graphique/zip/ppt.zip">PowerPoint</a> <span class="text-smaller">(à venir)</span></li>
         <li><a href="" disabled>Keynote</a> <span class="text-smaller">(à venir)</span></li>
         <li><a href="" disabled>Libre Office</a> <span class="text-smaller">(à venir)</span></li>
         <li><a href="" disabled>Reveal.js</a> <span class="text-smaller">(à venir)</span></li>
