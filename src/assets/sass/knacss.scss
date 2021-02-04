@@ -1,0 +1,363 @@
+/*!
+* KNACSS Reborn: Just keep it simple!
+* @author: Alsacreations
+* v1.0.0 2020/11
+* Licence WTFPL http://www.wtfpl.net/
+*/
+
+// WARNING : Only Core and Utilities are imported by default. Just add other files if you need them.
+
+// CORE
+@import "abstracts/variables-sass";
+@import "abstracts/mixins-sass";
+
+@import "base/reset-base";
+@import "base/reset-accessibility";
+@import "base/reset-forms";
+@import "base/reset-print";
+@import "base/layout";
+
+// UTILITY CLASSES
+@import "utils/utils-global";
+@import "utils/utils-spacers";
+@import "utils/grillade";
+
+// COMPONENTS (add them only if you need)
+@import "components/button";
+@import "components/burger";
+@import "components/checkbox";
+// @import "components/radio";
+// @import "components/select";
+// @import "components/quote";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//moins de 576
+#app {
+  width: 100%;
+  margin: 0 auto;
+  background: $color-gamma;
+  &> * {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.end {
+  align-self: end;
+}
+
+.middle {
+  align-self: center;
+}
+
+h2, .h2-like {
+  background: $color-alpha;
+  color: $white;
+  padding: $spacer-tiny $spacer-medium-plus;
+  padding-right: $spacer-small-plus;
+  margin-left: -$spacer-medium-plus;
+  margin-bottom: $spacer-tiny;
+  width: auto;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+h3 {
+  text-transform: uppercase;
+  padding: 0 0 $spacer-tiny;
+}
+
+p, ul {
+  margin-bottom: $spacer-medium;
+}
+li {
+  margin-bottom: $spacer-small;
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+  padding: $spacer-tiny;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 0 $spacer-tiny;
+  #logo {
+    margin-left: -$spacer-tiny;
+    padding-left: 7px;
+    img{
+      max-width: 200px;
+    }
+  }
+}
+
+#header {
+  border-bottom: 1px solid #eff0f4;
+}
+
+.intro {
+  padding-top: 0!important;
+}
+
+#logo {
+  border: none;
+}
+
+#nav {
+  list-style: none; 
+  transform: translateY(-$spacer-small);
+  a {
+    border: none;
+    color: $color-alpha;
+    padding: $spacer-small $spacer-small-plus;
+
+    &:hover {
+      background: white;
+      color: $color-alternate-2;
+      border-bottom: 2px solid $color-alternate-2;
+    }
+    &.router-link-active {
+      color: $color-alpha;
+      background: none;
+      border-bottom: 2px solid $color-alpha;
+    }
+  }
+}
+
+#menu-2 {
+  a {
+    border: none;
+    color: $color-alpha;
+  }
+}
+
+#menu-3 {
+  margin-top: $spacer-medium-plus;
+}
+
+.btn {
+  color: #fff!important;
+  background: $color-alpha;
+  // box-shadow: -2px 2px 0px #4d5f80;
+  padding: $spacer-small $spacer-medium; 
+  border-radius: 2px;
+  font-weight: bold;
+  margin-right: $spacer-medium;
+  margin-bottom: $spacer-medium;
+  &:hover {
+    background: $color-beta;
+    box-shadow: 0 0 0 #4d5f80;
+    color: #fff;
+  }
+}
+
+.valid {
+  background: $color-alternate-1;
+  &:hover {
+    background: $color-alternate-1b;
+  }
+}
+
+.text-valid {
+  color: $color-alternate-1;
+  &:hover {
+    color: $color-alternate-1b;
+  }
+}
+
+.info {
+  background: $color-alternate-2;
+  &:hover {
+    background: $color-alternate-2b;
+  }
+}
+
+.text-info {
+  color: $color-alternate-2;
+  &:hover {
+    color: $color-alternate-2b;
+  }
+}
+
+.important {
+  background: $color-alternate-3;
+  &:hover {
+    background: $color-alternate-3b;
+  }
+}
+
+.text-important {
+  color: $color-alternate-3;
+  &:hover {
+    color: $color-alternate-3b;
+  }
+}
+
+.warning {
+  background: $color-alternate-4;
+  &:hover {
+    background: $color-alternate-4b;
+  }
+}
+
+.text-warning {
+  color: $color-alternate-4;
+  &:hover {
+    color: $color-alternate-4b;
+  }
+}
+
+.disabled {
+  background: $color-beta;
+  cursor: not-allowed;
+  &:hover {
+    background: $color-beta;
+  } 
+}
+
+.txt-disabled {
+  color: $color-beta;
+  cursor: not-allowed;
+  &:hover {
+    color: $color-beta;
+  }  
+}
+
+.clear {
+  clear: both;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.chapter {
+  padding: 0 0 $spacer-medium;
+}
+
+.light {
+  background: $white
+}
+
+.dark, .alpha {
+  background: $color-alpha;
+}
+.beta {
+  background: $color-beta;
+}
+.gamma {
+  background: $color-gamma;
+}
+.black {
+  background: $black
+}
+
+.nuancier {
+  text-align: left;
+  th, td {
+    padding: $spacer-tiny;
+  }
+  td {
+
+    border: 1px solid $color-alpha;
+  }
+}
+
+.text {
+  div h1 {
+    padding-top: $spacer-large;
+  }
+
+  div:first-child h1 {
+    padding-top: 0;
+  }
+}
+
+.resultat {
+  background-color: $white;
+}
+
+.burger-button {
+  display: block;
+  position: fixed;
+  right: $spacer-small;
+  top: $spacer-small;
+  & > *, & > ::before, & > ::after{
+    background-image: linear-gradient($color-alpha, $color-alpha);
+  }
+}
+
+#nav ul{
+  display: none;
+  text-align: left;
+  &.opened {
+    display: block;
+    padding: $spacer-medium-plus 0;
+    padding-left: 36px;
+  }
+}
+
+//   sm: 576px,
+//   md: 768px,
+//   lg: 1024px,
+//   xl: 1330px,
+
+//plus de 576
+@media (min-width: $small) {
+
+  .container {
+    padding: $spacer-small;
+  }
+  .content {
+    padding: 0 $spacer-small;
+    width: $small;
+  }
+}
+//plus de 768
+@media (min-width: $medium) {
+  .container {
+    padding: $spacer-medium;
+  }
+  .content {
+    padding: 0 $spacer-medium;
+    width: $medium;
+  }
+}
+//plus de 1024
+@media (min-width: $large) {
+  .burger-button {
+    display: none;
+  }
+  #nav ul{
+    display: block;
+    text-align: right;
+  }
+  .nav-horizontal li {
+    display: inline;    
+  }
+  .container {
+    padding: $spacer-medium-plus;
+  }
+  .content {
+    width: $large;
+    padding: 0 $spacer-medium-plus;
+    #logo { margin-left: -$spacer-large; }
+  }
+}
+//plus de 1330
+@media (min-width: $extra-large) {
+  .container {
+    padding: $spacer-large;
+  }
+  .content {
+    padding: 0 $spacer-large;
+    width: $extra-large;
+    #logo { margin-left: -$spacer-large; }
+  }
+}
