@@ -6,9 +6,9 @@
     <div>
       <h3>Présentations</h3>
       <ul>
-        <li><a href="https://com.centrale-marseille.fr/charte_graphique/zip/ppt.zip">PowerPoint</a> <span class="text-smaller">(565,3 Ko)</span></li>
+        <li><a href="/charte_graphique/zip/ppt.zip">PowerPoint</a> <span class="text-smaller">(565 Ko)</span></li>
 
-        <li><a href="" disabled>Word</a> <span class="text-smaller">(à venir)</span></li>
+        <li><a href="/charte_graphique/zip/papier-entete-centrale-marseille-word.zip">Word</a> <span class="text-smaller">(270 Ko)</span></li>
 
         <li><a href="" disabled>Keynote</a> <span class="text-smaller">(à venir)</span></li>
 

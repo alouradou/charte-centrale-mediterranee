@@ -60,8 +60,8 @@ $grid-columns: 6 !default;
 // ----------------
 
 // Font families
-$font-family-base: barlow, sans-serif;
-$font-family-headings: "Barlow semi condensed";
+$font-family-base: barlow, helvetica, sans-serif;
+$font-family-headings: "Barlow semi condensed", barlow, helvetica, sans-serif;
 $font-family-monospace: consolas, courier, monospace;
 $line-height-base: 1.5;
 

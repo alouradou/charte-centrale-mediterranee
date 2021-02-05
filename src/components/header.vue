@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content grid sm:grid sm:grid-cols-2 sm:gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-6 lg:gap-6">
         <div class="col-span-1">
-          <a id="logo" href="/#/">
+          <a id="logo" href="/charte_graphique">
             <img src="../assets/img/logo.png" alt="Logo">
           </a>
         </div>
