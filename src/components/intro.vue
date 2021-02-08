@@ -8,15 +8,7 @@
         <menu3 class="menu"></menu3>
       </div>
       <div class="align-middle md:col-span-2 end">
-        <vue-plyr>
-          <video>
-            <source
-              size='720'
-              src='../assets/video/logo.mp4'
-              type='video/mp4'
-            />
-          </video>
-        </vue-plyr>
+        <myPlyr url="video/logo.mp4"></myPlyr>
       </div>
     </div>
   </div>
@@ -24,11 +16,13 @@
 
 <script>
   import menu3 from '@/components/menu3'
+  import myPlyr from '@/components/myPlyr'
 
   export default {
     name: 'intro',
     components: {
-      menu3
+      menu3,
+      myPlyr
     }
   }
 </script>

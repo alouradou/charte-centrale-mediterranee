@@ -10,15 +10,7 @@
     </div>
     <div>
       <p>
-        <vue-plyr>
-          <video>
-            <source
-              size='1920'
-              src='../assets/video/prez-logo.mp4'
-              type='video/mp4'
-            />
-          </video>
-        </vue-plyr>
+        <myPlyr url="video/prez-logo.mp4"></myPlyr>
       </p>
       <p>Vidéo de lancement du logo (janvier 2021)</p>
     </div>
@@ -26,7 +18,12 @@
 </template>
 
 <script>
+import myPlyr from '@/components/myPlyr'
+
 export default {
-  name: 'logo'
+  name: 'logo',
+  components: {
+    myPlyr
+  }
 }
 </script>

@@ -18,23 +18,20 @@
       <h3>Communication institutionnelle</h3>
       <p>La typographie <a href="https://www.linotype.com/fr/620/itc-conduit-famille.html">Conduit ITC Std</a> a été utilisée pour composer notre logo, elle reste la typographie officielle de la communication institutionnelle de Centrale Marseille (notamment sur les supports papier). Mais la licence ne permet pas une installation sur tous les postes de l'école. Si elle n'est pas sur votre poste, merci d'utiliser la Barlow comme typographie de substitution.</p>
       <div>
-        <vue-plyr>
-          <video>
-            <source
-              size="1920"
-              src="../assets/video/typo.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </vue-plyr>
+        <myPlyr url="video/typo.mp4"></myPlyr>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import myPlyr from '@/components/myPlyr'
 export default {
 
-  name: 'typographie'
+  name: 'typographie',
+  components: {
+    myPlyr
+  }
+
 }
 </script>

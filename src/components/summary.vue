@@ -9,15 +9,7 @@
         Il oriente la stratégie de la communication externe, permet de construire des éléments de langage, un ton, une plume et c’est donc le point d’appui principal pour la construction du nouveau logo.</p>
       </div>
       <div class="text col-span-2">
-        <vue-plyr>
-          <video>
-            <source
-              size='1920'
-              src='../assets/video/prez-plateforme.mp4'
-              type='video/mp4'
-            />
-          </video>
-        </vue-plyr>
+        <myPlyr url="video/prez-plateforme.mp4"></myPlyr>
       </div>
       <div class="text ">
         <h3>Vision</h3>
@@ -66,7 +58,13 @@
 </template>
 
 <script>
+
+import myPlyr from '@/components/myPlyr'
+
 export default {
-  name: 'summary'
+  name: 'summary',
+  components: {
+    myPlyr
+  }
 }
 </script>
