@@ -12,7 +12,7 @@
         <li><a href="https://fonts.google.com/specimen/Barlow#standard-styles">Barlow Normal</a></li>
         <li><a href="https://fonts.google.com/specimen/Barlow+Semi+Condensed">Barlow Semi-Condensed</a></li>
       </ul>
-      <p><a class="btn info align-middle" href="">Telecharger la typographie</a></p>
+      <p><a class="btn info align-middle" :href="path+'zip/Barlow.zip'">Telecharger la typographie</a></p>
     </div>
     <div>
       <h3>Communication institutionnelle</h3>
@@ -25,10 +25,16 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 import myPlyr from '@/components/myPlyr'
 export default {
 
   name: 'typographie',
+  data () {
+    return {
+      path: publicPath
+    }
+  },
   components: {
     myPlyr
   }

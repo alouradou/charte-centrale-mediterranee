@@ -1,7 +1,7 @@
 <template>
     <nav id="menu-2">
       <p>
-        <a class="btn end col-span-1 valid" href="/charte_graphique/zip/centrale-marseille-charte-graphique.zip">Kit à télécharger</a>
+        <a class="btn end col-span-1 valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
       </p>
       <ul>
         <li><a class="scrollactive-item" href="#" v-scroll-to="'#le-logo'">Le logo</a></li>
@@ -15,7 +15,13 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 export default {
-  name: 'menu2'
+  name: 'menu2',
+  data () {
+    return {
+      path: publicPath
+    }
+  }
 }
 </script>
