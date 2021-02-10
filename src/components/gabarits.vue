@@ -21,7 +21,7 @@
     </div>
     <div>
       <h3>Fonds pour visioconférence</h3>
-      <p><span class="text-smaller">(à venir)</span></p>
+      <p><a :href="path+'zip/fonds.zip'">Fonds </a><span class="text-smaller">(42 Ko)</span></p>
       <h3>Intro vidéo</h3>
       <p><span class="text-smaller">(à venir)</span></p>
     </div>
