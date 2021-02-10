@@ -39,7 +39,7 @@
             <td>10% de 2374</td>
             <td>100, 90, 12, 2</td>
             <td>0, 15, 159</td>
-            <td>#000f9f</td>
+            <td>#eff0f4</td>
           </tr>
         </tbody>
       </table>
