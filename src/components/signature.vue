@@ -28,7 +28,7 @@
             <div style="padding-top: 10px;">
               <p :style="style3"><a href="www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
               <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a href="tel:+33491054545">+33 4 91 05 45 45</a></p>
-              <p :style="style3"><a :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/facebook.png'" alt="Facebook"></a> <a :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/twitter.png'" alt="twitter"></a> <a :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/linkedin.png'" alt="linkedin"></a> <a :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/youtube.png'" alt="youtube"></a> <a :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/instagram.png'" alt="instagram"></a></p>
+              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
         </table>
