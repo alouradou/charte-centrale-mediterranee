@@ -7,7 +7,7 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Marseille" :src="path+'img/logo.png'" width="80" height="43" style="font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px" border="0">
+            <img alt="logo Centrale Marseille" :src="path+'img/logo.png'" width="100" height="54" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -27,14 +27,14 @@
             </div>
             <div style="padding-top: 10px;">
               <p :style="style3"><a href="www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
-              <p :style="style3"><a href="tel:+33491054545">+33 4 91 05 45 45</a></p>
+              <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a href="tel:+33491054545">+33 4 91 05 45 45</a></p>
+              <p :style="style3"><a :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/facebook.png'" alt="Facebook"></a> <a :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/twitter.png'" alt="twitter"></a> <a :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/linkedin.png'" alt="linkedin"></a> <a :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/youtube.png'" alt="youtube"></a> <a :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
         </table>
       </div>
     </div>
     <div class="champs py-0 my-0">
-      
       <p>
         <input class="line" type="text" v-model="line1" placeholder="Prénom Nom">
         <input class="line" type="text" v-model="line2" placeholder="ligne 1">
@@ -43,11 +43,26 @@
         <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
       </p> 
-      <p>
-        <button class="btn py-0 my-0" @click="doCopy">Copier la signature</button>
-        <a class="py-0 my-0" @click="reset">Reset</a>
-      </p>
+      <div>
+        <p>
+          <input id="modifyRS" class="checkbox" type="checkbox" v-model="modifyRS">
+          <label class="px-2" for="modifyRS">Modifier les liens des réseaux sociaux</label>
+        </p>
+        <p v-if="modifyRS" class="modifyRSinput pb-6">
+          <input class="line" type="text" v-model="facebook" placeholder="facebook">
+          <input class="line" type="text" v-model="twitter" placeholder="twitter">
+          <input class="line" type="text" v-model="instagram" placeholder="instagram">
+          <input class="line" type="text" v-model="linkedin" placeholder="linkedin">
+          <input class="line" type="text" v-model="youtube" placeholder="youtube">
+        </p>
+        <p>
+          <button class="btn py-0 my-0" @click="doCopy">Copier la signature</button>
+          <a class="py-0 my-0" @click="reset">Reset</a>
+        </p>
+      </div>
+
     </div>
+    
     <div class="text-smaller text-info py-0 my-0">
       <p class="text-valid">{{message}}</p>
       <p v-if="htmlVersion" ref="copyRawHtml">{{$refs.copySignature.innerHTML}}</p>
@@ -69,6 +84,7 @@ export default {
   name: 'Formulaire',
   data () {
     return {
+      modifyRS: false,
       path: publicPath,
       message: '',
       line1: '',
@@ -77,12 +93,18 @@ export default {
       line4: '',
       telephone1: '',
       telephone2: '',
+      facebook: 'https://www.facebook.com/CentraleMarseille',
+      twitter: 'https://twitter.com/CentraleMars',
+      linkedin: 'https://www.linkedin.com/school/ecole-centrale-de-marseille/',
+      instagram: 'https://www.instagram.com/centralemarseille/',
+      youtube: 'https://www.youtube.com/user/CentraleMarseille/featured',
       copythis: Object,
       validated: false,
       htmlVersion: false,
-      style1: 'padding: 0; margin: 0; font-size: 10pt; color:#000f9f; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 18px; vertical-align: top; line-height:.8',
-      style2: 'padding: 0; margin: 0; font-size: 10pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 18px; vertical-align: top; line-height:.8',
-      style3: 'padding: 0; margin: 0; font-size: 8pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 18px; vertical-align: top; line-height:.8;'
+      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;',
+      style1: 'padding: 0; margin: 0; font-size: 10pt; color:#000f9f; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8',
+      style2: 'padding: 0; margin: 0; font-size: 10pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8',
+      style3: 'padding: 0; margin: 0; font-size: 8pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8;'
     }
   },
   computed: {
@@ -158,6 +180,9 @@ export default {
     background: #fff;
     border: 1px solid #eff0f4!important;
     padding: 15px;
+  }
+  .modifyRSinput input {
+    width: 100%;
   }
   
 </style>
