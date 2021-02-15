@@ -7,7 +7,7 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img style="padding-bottom: 5px" src="https://com.centrale-marseille.fr/charte_graphique/img/logo-email.png"/>
+            <img alt="logo Centrale Marseille" :src="path+'img/logo.png'" width="80" height="43" style="font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px" border="0">
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -63,11 +63,13 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 
 export default {
   name: 'Formulaire',
   data () {
     return {
+      path: publicPath,
       message: '',
       line1: '',
       line2: '',
