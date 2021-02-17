@@ -7,7 +7,7 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Marseille" :src="path+'img/logo.png'" width="100" height="54" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
+            <img alt="logo Centrale Marseille" :src="absolutePath+'img/logo.png'" width="100" height="54" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -28,7 +28,7 @@
             <div style="padding-top: 10px;">
               <p :style="style3"><a href="www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
               <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a href="tel:+33491054545">+33 4 91 05 45 45</a></p>
-              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="path+'img/instagram.png'" alt="instagram"></a></p>
+              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
         </table>
@@ -108,6 +108,9 @@ export default {
     }
   },
   computed: {
+    absolutePath: function () {
+      return 'https://com.centrale-marseille.fr/charte_graphique/'
+    },
     tel1: function () {
       return 'tel:' + this.telephone1.split(' ').join('')
     },
