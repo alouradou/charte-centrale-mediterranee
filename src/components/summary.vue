@@ -2,14 +2,14 @@
   <div id="la-charte" class="container light">
     <div class="content md:grid md:grid-cols-4 md:gap-6">
       <div class="text col-span-2 light">
-        <h2>La marque</h2>
-        <p class="py-4"><strong>La marque se construit autour d’un texte fondamental.</strong>
+        <h2>Présentation</h2>
+        <p class="py-4">La plateforme de marque se construit autour d’un texte fondamental.
         Ce texte exprime la vision de la marque sur l'avenir de son métier, sa mission, ses engagements, ses valeurs clés, ses traits de personnalité. 
         Il est là pour guider chacun dans sa manière de parler de l’école.
-        Il oriente la stratégie de la communication externe, permet de construire des éléments de langage, un ton, une plume et c’est donc le point d’appui principal pour la construction du nouveau logo.</p>
+        Il oriente la stratégie de la communication externe, permet de construire des éléments de langage, un ton, une plume…</p>
       </div>
-      <div class="text col-span-2">
-        <myPlyr url="video/prez-plateforme.mp4"></myPlyr>
+      <div class="text col-span-2 p-6">
+        <myPlyr url="video/logo.mp4"></myPlyr>
       </div>
       <div class="text ">
         <h3>Vision</h3>
