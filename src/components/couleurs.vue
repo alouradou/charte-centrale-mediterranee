@@ -37,8 +37,8 @@
           <tr class="border">
             <td class="gamma"></td>
             <td>10% de 2374</td>
-            <td>100, 90, 12, 2</td>
-            <td>0, 15, 159</td>
+            <td>7, 5, 3, 0</td>
+            <td>239, 240, 244</td>
             <td>#eff0f4</td>
           </tr>
         </tbody>
