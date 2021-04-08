@@ -1,92 +1,72 @@
 <template>
-  <div id="couleurs" class="chapter md:grid md:grid-cols-2 md:gap-6">
+  <div id="couleurs" class="chapter md:grid md:grid-cols-3 md:gap-6">
     <div class="col-span-full">
       <h2>Couleurs</h2>
     </div>
-    <div>
+    <div class="col-span-1">
       <p>Un bleu en teinte dominante, bleu comme la science, Marseille et la France vues de l’international. Un bleu institutionnel, sérieux qui renforce la dimension scientifique de la marque, avec force et dynamisme. Un bleu de haute mer qui nous éloigne des côtes récréatives. Un bleu foncé qui permet le contraste et la distinction.</p>
       <p>Un gris en contrepoint met en valeur le bleu, engage notre sérieux, notre sobriété et apporte une touche design.</p>
     </div>
-    <div>
+    <div class="col-span-2">
       <h3>Teintes principales</h3>
-      <table class="nuancier">
-        <thead>
-          <tr>
-            <th>Teinte</th>
-            <th>Pantone</th>
-            <th>CMJN</th>
-            <th>RVB</th>
-            <th>#Hex</th>
-          </tr>
-        </thead>
-        <tbody class="text-smaller">
-          <tr>
-            <td class="alpha"></td>
-            <td>BLUE 072</td>
-            <td>100, 90, 12, 2</td>
-            <td>0, 15, 159</td>
-            <td>#000f9f</td>
-          </tr>
-          <tr>
-            <td class="beta"></td>
-            <td>2374</td>
-            <td>76, 58, 30, 14</td>
-            <td>77, 95, 128</td>
-            <td>#4d5f80</td>
-          </tr>
-          <tr class="border">
-            <td class="gamma"></td>
-            <td>10% de 2374</td>
-            <td>7, 5, 3, 0</td>
-            <td>239, 240, 244</td>
-            <td>#eff0f4</td>
-          </tr>
-        </tbody>
-      </table>
+      <tableauColor :colors="colorPrimary"></tableauColor>
+      <br>
       <h3>Teintes secondaires</h3>
-      <table class="nuancier">
-        <thead>
-          <tr>
-            <th>Teinte</th>
-            <th>RVB</th>
-            <th>#Hex</th>
-          </tr>
-        </thead>
-        <tbody class="text-smaller">
-          <tr>
-            <td class="valid"></td>
-            <td>18, 140, 56</td>
-            <td>#128c38</td>
-          </tr>
-          <tr>
-            <td class="warning"></td>
-            <td>220, 22, 47</td>
-            <td>#dc162f</td>
-          </tr>
-          <tr>
-            <td class="important"></td>
-            <td>247, 175, 23</td>
-            <td>#f7af17</td>
-          </tr>
-          <tr>
-            <td class="info"></td>
-            <td>97, 52, 138</td>
-            <td>#61348a</td>
-          </tr>
-          <tr>
-            <td class="neutral"></td>
-            <td>36, 135, 185</td>
-            <td>#2487b9</td>
-          </tr>
-        </tbody>
-      </table>
+      <tableauColor :colors="colorSecondary"></tableauColor>
     </div>
   </div>
 </template>
 
 <script>
+  import tableauColor from '@/components/tableau-couleurs'
 export default {
-
-  name: 'couleurs'
+  name: 'couleurs',
+  components: {
+    tableauColor
+  },
+  data () {
+    return {
+      colorPrimary: [{
+        Pantone:'BLUE 072',
+        CMJN:'100, 90, 12, 2',
+        RVB:'0, 15, 159',
+        Hex:' #000f9f'
+      },
+      {
+        Pantone:'2374',
+        CMJN:'76, 58, 30, 14',
+        RVB:'77, 95, 128',
+        Hex:'#4d5f80'
+      },
+      {
+        Pantone:'10% de 2374',
+        CMJN:'7, 5, 3, 0',
+        RVB:'239, 240, 244',
+        Hex:' #eff0f4'
+      }],
+      colorSecondary: [
+        {
+          RVB:'18, 140, 56',
+          Hex:'#128c38'
+        },
+        {
+          RVB:'220, 22, 47',
+          Hex:'#dc162f'
+        },
+        {
+          RVB:'247, 175, 23',
+          Hex:'#f7af17'
+        },
+        {
+          RVB:'97, 52, 138',
+          Hex:'#61348a'
+        },
+        {
+          RVB:'36, 135, 185',
+          Hex:'#2487b9'
+        },
+      ]
+    }
+  }
 }
 </script>
