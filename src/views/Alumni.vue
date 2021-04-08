@@ -1,15 +1,16 @@
 <template>
   <div :id="$options.name">
-    <AlumniSum></AlumniSum>
+    <Sum></Sum>
     <div class="container">
-      <div class="content">
-        <h2>Couleurs</h2>
-        <AlumniCouleurs :colors="colors"></AlumniCouleurs>
+      <div class="content md:grid md:grid-cols-4 md:gap-6">
+        <div class="col-span-full"><h2>Couleurs</h2></div>
+        <Couleurs class="text col-span-3" :colors="colors"></Couleurs>
       </div>
     </div>
     <div class="container">
-      <div class="content">
+      <div class="content md:grid md:grid-cols-4 md:gap-6">
         <Signature 
+          class="text col-span-3"
           logoUrl="img/logo-alumni.png"
           :logoWidth="101"
           :logoHeight="51"
@@ -22,8 +23,8 @@
 </template>
 
 <script>
-import AlumniSum from '@/components/alumni/summary'
-import AlumniCouleurs from '@/components/tableau-couleurs'
+import Sum from '@/components/alumni/summary'
+import Couleurs from '@/components/tableau-couleurs'
 import Signature from '@/components/signature'
 
 export default {
@@ -52,8 +53,8 @@ export default {
     }
   },
   components: {
-    AlumniSum,
-    AlumniCouleurs,
+    Sum,
+    Couleurs,
     Signature
   }
 }
