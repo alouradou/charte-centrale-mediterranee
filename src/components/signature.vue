@@ -7,7 +7,7 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Marseille" :src="absolutePath+'img/logo.png'" width="100" height="54" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
+            <img alt="logo Centrale Marseille" :src="absolutePath+logoUrl" :width="logoWidth" :height="logoHeight" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -15,8 +15,8 @@
             </div>
             <div style="padding-top: 10px;" v-if="line4 || telephone1 || telephone2">
               <p :style="style1" v-if="line4">{{line4}}</p>
-              <p v-if="telephone1" :style="style1">Tél : <a style="color: #000f9f" :href="tel1">{{telephone1}}</a></p>
-              <p v-if="telephone2" :style="style1">Tél : <a style="color: #000f9f" :href="tel2">{{telephone2}}</a></p>
+              <p v-if="telephone1" :style="style1">Tél : <a :style="style1" :href="tel1">{{telephone1}}</a></p>
+              <p v-if="telephone2" :style="style1">Tél : <a :style="style1" :href="tel2">{{telephone2}}</a></p>
             </div>
             <div style="padding-top: 10px;">
               <p :style="style2" style="font-weight: bold">Centrale Marseille</p>
@@ -82,6 +82,13 @@ import { publicPath } from './../../vue.config.js'
 
 export default {
   name: 'Formulaire',
+  props: {
+    logoUrl: String,
+    logoWidth: Number,
+    logoHeight: Number,
+    color1: String,
+    color2: String
+  },
   data () {
     return {
       modifyRS: false,
@@ -101,13 +108,19 @@ export default {
       copythis: Object,
       validated: false,
       htmlVersion: false,
-      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;',
-      style1: 'padding: 0; margin: 0; font-size: 10pt; color:#000f9f; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8',
-      style2: 'padding: 0; margin: 0; font-size: 10pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8',
-      style3: 'padding: 0; margin: 0; font-size: 8pt; color:#4d5f80; font-family: Arial, sans-serif; padding-bottom: 5px; padding-left: 22px; vertical-align: top; line-height:.8;'
+      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;'
     }
   },
   computed: {
+    style1: function () {
+      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
+    style2: function () {
+      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+' font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
+    style3: function () {
+      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
     absolutePath: function () {
       return 'https://com.centrale-marseille.fr/charte_graphique/'
     },

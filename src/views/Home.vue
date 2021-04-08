@@ -5,14 +5,18 @@
     
     <sum></sum>
 
-<div class="container">
+    <div class="container">
       <div class="content md:grid md:grid-cols-4 md:gap-6">
         <div class="text col-span-3">
           <logo></logo>
           <logoDetail></logoDetail>
           <typographie></typographie>
           <couleurs></couleurs>  
-          <signature></signature>
+          <signature 
+            logoWidth="100" 
+            logoHeight="100" 
+            logoUrl="img/logo.png" 
+            color="#4d5f80"></signature>
           <gabarits></gabarits>
         </div>
         <menu2 class="sous-menu col-span-1"></menu2>
