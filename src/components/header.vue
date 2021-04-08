@@ -1,5 +1,5 @@
 <template>
-  <header id="header">
+  <header id="theHeader">
     <div class="container">
       <div class="content grid sm:grid sm:grid-cols-2 sm:gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-6 lg:gap-6">
         <div class="col-span-1">
@@ -18,7 +18,10 @@
               <router-link disabled to="/fondation">La fondation</router-link>
             </li>
             <li>
-              <router-link disabled to="/alumni">Alumni</router-link>
+              <router-link to="/alumni">Alumni</router-link>
+            </li>
+            <li>
+              <router-link to="/le-deck">Le deck</router-link>
             </li>
             <li>
               <router-link disabled to="/exectutive-education">Executive Education</router-link>
@@ -36,7 +39,7 @@
 <script>
 
 export default {
-  name: 'header',
+  name: 'theHeader',
   data () {
     return {
       isOpened: false
