@@ -7,9 +7,12 @@
         Ce texte exprime la vision de la marque sur l'avenir de son métier, sa mission, ses engagements, ses valeurs clés, ses traits de personnalité. 
         Il est là pour guider chacun dans sa manière de parler de l’école.
         Il oriente la stratégie de la communication externe, permet de construire des éléments de langage, un ton, une plume…</p>
+        <h2>Notre signature</h2>
+        <p></p>
+        <p class="big text-bigger"><strong>Nous avons un monde à transformer</strong></p>
       </div>
       <div class="text col-span-2 p-6">
-        <myPlyr url="video/logo.mp4"></myPlyr>
+        <myPlyr url="video/logo.mp4" poster="img/signature.png"></myPlyr>
       </div>
       <div class="text ">
         <h3>Vision</h3>

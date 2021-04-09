@@ -1,6 +1,6 @@
 <template>
   <vue-plyr>
-    <video>
+    <video :data-poster="posterlink">
       <source
         :size="'1920'"
         :src="videolink"
@@ -16,10 +16,13 @@ import { publicPath } from './../../vue.config.js'
 export default {
 
   name: 'myPlyr',
-  props: ['size', 'url', 'type'],
+  props: ['size', 'url', 'type', 'poster'],
   computed: {
     videolink: function () {
       return publicPath + this.url
+    },
+    posterlink: function () {
+      return publicPath + this.poster
     }
   }
 }
