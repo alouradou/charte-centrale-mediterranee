@@ -2,6 +2,6 @@
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/charte_graphique/'
+    ? '/charte_graphique_v2/'
     : '/'
 }
