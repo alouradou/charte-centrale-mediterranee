@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content grid sm:grid sm:grid-cols-2 sm:gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-6 lg:gap-6">
         <div class="col-span-1">
-          <a id="logo" href="/charte_graphique">
+          <a id="logo" :href="path">
             <img src="../assets/img/logo.png" alt="Logo">
           </a>
         </div>
@@ -12,19 +12,22 @@
           <button :class="{ active:isOpened }" class="burger-button" @click="toggleBurger" type="button" role="button" aria-label="open/close navigation"><i></i></button>
           <ul :class="{ opened:isOpened }">
             <li>
-              <router-link to="/">La marque Centrale Marseille</router-link>
+              <router-link to="/">La marque</router-link>
             </li>
             <li>
-              <router-link disabled to="/fondation">La fondation</router-link>
+              <router-link to="/charte-graphique">La charte graphique</router-link>
+            </li>
+            <li>
+              <router-link to="/fondation">La fondation</router-link>
             </li>
             <li>
               <router-link to="/alumni">Alumni</router-link>
             </li>
             <li>
-              <router-link to="/le-deck">Le deck</router-link>
+              <router-link to="/le-deck">Le Deck</router-link>
             </li>
             <li>
-              <router-link disabled to="/exectutive-education">Executive Education</router-link>
+              <router-link to="/exectutive-education">Executive Education</router-link>
             </li>
 <!--             <li>
               <router-link to="/deck">Le deck</router-link>
@@ -37,12 +40,14 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 
 export default {
   name: 'theHeader',
   data () {
     return {
-      isOpened: false
+      isOpened: false,
+      path: publicPath
     }
   },
   methods: {

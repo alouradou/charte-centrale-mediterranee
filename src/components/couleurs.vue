@@ -3,16 +3,19 @@
     <div class="col-span-full">
       <h2>Couleurs</h2>
     </div>
-    <div class="col-span-1">
-      <p>Un bleu en teinte dominante, bleu comme la science, Marseille et la France vues de l’international. Un bleu institutionnel, sérieux qui renforce la dimension scientifique de la marque, avec force et dynamisme. Un bleu de haute mer qui nous éloigne des côtes récréatives. Un bleu foncé qui permet le contraste et la distinction.</p>
-      <p>Un gris en contrepoint met en valeur le bleu, engage notre sérieux, notre sobriété et apporte une touche design.</p>
+    <div class="col-span-full">
+      <h3>Teintes principales</h3>
     </div>
     <div class="col-span-2">
-      <h3>Teintes principales</h3>
+      
       <tableauColor :colors="colorPrimary"></tableauColor>
       <br>
       <h3>Teintes secondaires</h3>
       <tableauColor :colors="colorSecondary"></tableauColor>
+    </div>
+    <div class="col-span-1">
+      <p>Un bleu en teinte dominante, bleu comme la science, Marseille et la France vues de l’international. Un bleu institutionnel, sérieux qui renforce la dimension scientifique de la marque, avec force et dynamisme. Un bleu de haute mer qui nous éloigne des côtes récréatives. Un bleu foncé qui permet le contraste et la distinction.</p>
+      <p>Un gris en contrepoint met en valeur le bleu, engage notre sérieux, notre sobriété et apporte une touche design.</p>
     </div>
   </div>
 </template>

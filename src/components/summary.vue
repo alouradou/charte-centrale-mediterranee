@@ -1,7 +1,7 @@
 <template>
-  <div id="la-charte" class="container light">
+  <div id="la-charte" class="container">
     <div class="content md:grid md:grid-cols-4 md:gap-6">
-      <div class="text col-span-2 light">
+      <div class="text col-span-2">
         <h2>Présentation</h2>
         <p class="py-4">La plateforme de marque se construit autour d’un texte fondamental.
         Ce texte exprime la vision de la marque sur l'avenir de son métier, sa mission, ses engagements, ses valeurs clés, ses traits de personnalité. 
@@ -41,7 +41,7 @@
           <li>Authentique</li>
         </ul>
       </div>
-      <div class="text md:col-span-2 light">
+      <div class="text md:col-span-2">
         <h3>Engagements</h3>
         <ol>
           <li>Former des ingénieurs Centraliens avec le sens de l’engagement : généralistes de haut niveau scientifique et technique, experts dans le lancement et le pilotage de projets innovants et à forte culture internationale</li>

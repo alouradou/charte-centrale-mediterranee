@@ -1,6 +1,10 @@
 <template>
   <div id="logo-details" class="chapter grid grid-cols-2 gap-6">
+    <div class="col-span-full">
+      <h2>Le logo </h2>
+    </div>
     <div>
+
       <h3>Officiel</h3> 
       <p>La version à privilégier partout où c'est possible…</p>
     </div>
