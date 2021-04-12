@@ -116,7 +116,7 @@ export default {
       return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
     style2: function () {
-      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+' font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
     style3: function () {
       return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'

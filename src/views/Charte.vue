@@ -9,9 +9,10 @@
           <couleurs></couleurs>  
           <signature 
             :logoWidth="100" 
-            :logoHeight="100" 
+            :logoHeight="59" 
             logoUrl="img/logo.png" 
-            color="#4d5f80"></signature>
+            color1="#000f9f"
+            color2="#4d5f80"></signature>
           <gabarits></gabarits>
         </div>
         <menu2 class="sous-menu col-span-1"></menu2>
