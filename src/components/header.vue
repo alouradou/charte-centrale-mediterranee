@@ -24,10 +24,10 @@
               <router-link to="/alumni">Alumni</router-link>
             </li>
             <li>
-              <router-link to="/le-deck">Le Deck</router-link>
+              <router-link to="/exectutive-education">Executive Education</router-link>
             </li>
             <li>
-              <router-link to="/exectutive-education">Executive Education</router-link>
+              <router-link to="/le-deck">Le Deck</router-link>
             </li>
 <!--             <li>
               <router-link to="/deck">Le deck</router-link>
