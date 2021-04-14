@@ -66,7 +66,7 @@
     </div>
     <div class="col-span-full">
       <h3>Pictogrammes</h3>
-      <div class="grid grid-cols-5">
+      <div class="grid grid-cols-5 gap-6">
       <img class="light" src="../assets/img/picto-zExcl.png" alt="picto">
       <img class="dark" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
       <img class="light" src="../assets/img/picto-bleu-zExcl.png" alt="picto">

@@ -8,10 +8,14 @@
               <img src="../assets/img/alumni/logo-Centrale-Marseille-Alumni.png" alt="logo Centrale Marseille Alumni">
             </h1>
           </div>
-          <p class="pt-6">L’orange de <strong>Centrale Marseille Alumni</strong> marque l’énergie chaleureuse et bienveillante de l’association. Cette couleur témoigne des multiples souvenirs et histoires faits sur le campus. 
-          Les diplômés centraliens sont unies par leurs passations à l’école. Ils se sont créé des liens qui se manifestent dans leurs activités professionnelles et amicales et qui perdurent aussi par la vivacité de l’association.
-          Chaque génération d’ingénieur à des savoir-faire propres. Par l’échange de ses savoirs et compétences, de nouvelles idées émergent. Ainsi, le réseau d’Alumni permet de tisser des liens intergénérationnels qui font naître des solutions aux défis du monde.
-          </p>
+          <div class="pt-6">
+            <h3>Centrale Marseille et ses marques filles</h3>
+            <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
+            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>          
+            <h3>Alumni</h3>
+            <p>L’orange de Centrale Marseille Alumni marque l’énergie bienveillante de l’association et reste le témoin des multiples souvenirs et histoires faits sur le campus car elle correspond exactement au orange de l’ancienne charte. Cette volonté de continuité marque la pérennité des engagements et des missions de l’association des diplômés de Centrale Marseille.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +45,7 @@
           </div>
           <div class="col-span-full">
             <h3>Pictogrammes</h3>
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-6 gap-6">
             <img class="light" src="../assets/img/alumni/picto-Centrale-Marseille-Alumni.png" alt="picto">
             <img class="alumni" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
             <img class="light" src="../assets/img/alumni/picto-orange-logo-Centrale-Marseille-Alumni.png" alt="">

@@ -8,8 +8,15 @@
               <img src="../assets/img/ex-ed/logo-Centrale-Marseille-Executive-education.png" alt="logo Executive Education">
             </h1>
           </div>
-          <p class="pt-6"><strong>Centrale Marseille Executive Education</strong> se différencie par sa couleur dominante : un violet soutenu de teinte prestigieuse répandue dans le milieu de la formation continue. Cherchant à former pour acquérir des nouveaux savoirs et savoir-faire, Executive Education répond aux transformations et des défis d’aujourd’hui et demain.
-          </p>
+          <div class="pt-6">
+            <h3>Centrale Marseille et ses marques filles</h3>
+              <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
+              Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>  
+            <h3>Executive Education</h3>
+            <p>
+  Centrale Marseille Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,7 +67,7 @@
           </div>
           <div class="col-span-full mt-6 mb-0">
             <h3>Pictogrammes</h3>
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-6 gap-6">
             <img class="light" src="../assets/img/ex-ed/picto-Centrale-Marseille-Executive-education.png" alt="picto">
             <img class="exed" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
             <img class="light" src="../assets/img/ex-ed/picto-violet-Centrale-Marseille-Executive-education.png" alt="">

@@ -8,7 +8,15 @@
               <img src="../assets/img/fondation/fondation.png" alt="logo Fondation Centrale Marseille">
             </h1>
           </div>
-          <p class="pt-6"></p>
+          <div class="pt-6">
+            <h3>Centrale Marseille et ses marques filles</h3>
+            <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
+            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>          
+            <h3>La Fondation</h3>
+            <p>
+              La Fondation Centrale Marseille ne se distingue pas par une couleur, car elle est portée directement par l’école. Elle se démarque uniquement par la composition typographique, afin de lui permettre une distinction juridique et une prise de parole autonome. 
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -16,7 +24,7 @@
       <div class="content md:grid md:grid-cols-4 md:gap-6">
         <div class="text col-span-3">
           <div class="mb-6"><h2>Logo</h2></div>
-            <div class="chapter grid grid-cols-4 gap-6">
+            <div class="chapter grid grid-cols-3 gap-6">
               <div class="light">
                 <img src="../assets/img/fondation/fondation.png" alt="logo">
               </div>
@@ -24,28 +32,40 @@
                 <img src="../assets/img/fondation/fondation-noir-au-blanc.png" alt="logo">
               </div>
               <div class="end light">
-                <img src="../assets/img/fondation/fondation-2.png" alt="logo">
-              </div>
-              <div class="end dark">
-                <img src="../assets/img/fondation/fondation-noir-au-blanc-2.png" alt="logo">
-              </div>
-              <div class="col-span-full"><h3 class="mb-0 pb-0">Monochrome</h3></div>
-              <div class="light">
                 <img src="../assets/img/fondation/fondation-bleu.png" alt="logo">
               </div>
-              <div class="end dark">
+              <div class="end black">
                 <img src="../assets/img/fondation/fondation-blanc.png" alt="logo">
               </div>
-              <div class="light">
+              <div class="end light">
                 <img src="../assets/img/fondation/fondation-noir-et-blanc.png" alt="logo">
               </div>
               <div class="end black">
                 <img src="../assets/img/fondation/fondation-blanc-et-noir.png" alt="logo">
               </div>
+              <div class="col-span-full"><h3 class="mb-0 pb-0">Version courte</h3></div>
+              <div class="light">
+                <img src="../assets/img/fondation/fondation-2.png" alt="logo">
+              </div>
+              <div class="dark">
+                <img src="../assets/img/fondation/fondation-noir-au-blanc-2.png" alt="logo">
+              </div>
+              <div class="end light">
+                <img src="../assets/img/fondation/fondation-bleu-2.png" alt="logo">
+              </div>
+              <div class="end black">
+                <img src="../assets/img/fondation/fondation-blanc-2.png" alt="logo">
+              </div>
+              <div class="end light">
+                <img src="../assets/img/fondation/fondation-noir-et-blanc-2.png" alt="logo">
+              </div>
+              <div class="end black">
+                <img src="../assets/img/fondation/fondation-blanc-et-noir-2.png" alt="logo">
+              </div>
             </div>
             <div class="col-span-full">
               <h3>Pictogrammes</h3>
-              <div class="grid grid-cols-5">
+              <div class="grid grid-cols-5 gap-6">
               <img class="light" src="../assets/img/picto-zExcl.png" alt="picto">
               <img class="dark" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
               <img class="light" src="../assets/img/picto-bleu-zExcl.png" alt="picto">
