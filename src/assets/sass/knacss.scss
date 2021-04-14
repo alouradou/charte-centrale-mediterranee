@@ -92,9 +92,11 @@ p, li, h1, h2, h3, h4, h5, h6 {
     padding-left: 7px;
     img{
       max-width: 200px;
+      width: 100%;
     }
   }
 }
+
 
 #theHeader {
   border-bottom: 1px solid #eff0f4;
@@ -107,20 +109,25 @@ p, li, h1, h2, h3, h4, h5, h6 {
 #logo {
   border: none;
 }
-
 #nav {
   list-style: none; 
   transform: translateY(-$spacer-small);
+  
+  ul{
+    display: none;
+    text-align: left;
+    &.opened {
+      display: block;
+      padding: $spacer-medium-plus 0;
+      padding-left: 36px;
+    }
+  }
+
   a {
     border: none;
     color: $color-alpha;
     padding: $spacer-small $spacer-small-plus;
 
-    &:hover {
-      background: white;
-      color: $color-alternate-2;
-      border-bottom: 2px solid $color-alternate-2;
-    }
     &.router-link-active {
       color: $color-alpha;
       background: none;
@@ -298,21 +305,12 @@ h1 {
   display: block;
   position: fixed;
   right: $spacer-small;
-  top: $spacer-small;
+  top: -35px;
   & > *, & > ::before, & > ::after{
     background-image: linear-gradient($color-alpha, $color-alpha);
   }
 }
 
-#nav ul{
-  display: none;
-  text-align: left;
-  &.opened {
-    display: block;
-    padding: $spacer-medium-plus 0;
-    padding-left: 36px;
-  }
-}
 
 //   sm: 576px,
 //   md: 768px,
@@ -321,7 +319,6 @@ h1 {
 
 //plus de 576
 @media (min-width: $small) {
-
   .container {
     padding: $spacer-small;
   }
@@ -370,5 +367,26 @@ h1 {
     padding: 0 $spacer-large;
     width: $extra-large;
     #logo { margin-left: -$spacer-large; }
+  }
+}
+
+
+
+//moins de 1024
+@media (max-width: $large) {
+  .logo-container {
+    grid-column: 1 / -1;
+  }
+  #nav a {
+    padding: 5px 0 5px 0px;
+    margin: 5px 5px 5px 10px;  
+    &.router-link-active {
+      background: none;
+    }
+    &:hover {
+      background: none;
+      color: $color-alternate-2;
+      border-bottom: none;
+    }
   }
 }
