@@ -8,8 +8,8 @@
           <typographie></typographie>
           <couleurs></couleurs>  
           <signature 
-            :logoWidth="100" 
-            :logoHeight="59" 
+            :logoWidth="101" 
+            :logoHeight="53" 
             logoUrl="img/logo.png" 
             color1="#000f9f"
             color2="#4d5f80"></signature>

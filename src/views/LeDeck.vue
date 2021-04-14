@@ -39,12 +39,10 @@
           </div>
           <div class="col-span-full">
             <h3>Pictogrammes</h3>
-            <div class="grid grid-cols-5">
+            <div class="grid grid-cols-3 gap-6">
             <img class="light" src="../assets/img/le-deck/picto-Le-Deck.png" alt="picto">
             <img class="ledeck" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
             <img class="light" src="../assets/img/le-deck/picto-jaune-Le-Deck.png" alt="">
-            <img class="dark" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
-            <img class="light" src="../assets/img/picto-bleu-zExcl.png" alt="picto">
             </div>
           </div>
           <div class="pt-6"><h2>Couleurs</h2></div>
@@ -52,8 +50,8 @@
           <Signature 
             class="pt-6"
             logoUrl="img/logo-le-deck.png"
-            :logoWidth="101"
-            :logoHeight="51"
+            :logoWidth="113"
+            :logoHeight="57"
             color1="#000f9f"
             color2="#d4b718">
           </Signature>

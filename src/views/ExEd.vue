@@ -60,12 +60,10 @@
           </div>
           <div class="col-span-full mt-6 mb-0">
             <h3>Pictogrammes</h3>
-            <div class="grid grid-cols-5">
+            <div class="grid grid-cols-3 gap-6">
             <img class="light" src="../assets/img/ex-ed/picto-Centrale-Marseille-Executive-education.png" alt="picto">
             <img class="exed" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
             <img class="light" src="../assets/img/ex-ed/picto-violet-Centrale-Marseille-Executive-education.png" alt="">
-            <img class="dark" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
-            <img class="light" src="../assets/img/picto-bleu-zExcl.png" alt="picto">
             </div>
           </div>
           <div class="pt-6"><h2>Couleurs</h2></div>
@@ -73,8 +71,8 @@
           <Signature 
             class="pt-6"
             logoUrl="img/logo-ex-ed.png"
-            :logoWidth="101"
-            :logoHeight="62"
+            :logoWidth="111"
+            :logoHeight="68"
             color1="#000f9f"
             color2="#250e62">
           </Signature>
