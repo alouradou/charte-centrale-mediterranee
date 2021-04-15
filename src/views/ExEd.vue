@@ -16,6 +16,7 @@
             <p>
   Centrale Marseille Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
             </p>
+            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
           </div>
         </div>
       </div>
@@ -90,6 +91,7 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 import Couleurs from '@/components/tableau-couleurs'
 import Signature from '@/components/signature'
 
@@ -101,6 +103,7 @@ export default {
   },
   data () {
     return {
+      path: publicPath,
       colors: [
       {
         Pantone:'BLUE 072',

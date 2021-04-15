@@ -14,6 +14,7 @@
               Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>  
             <h3>Le Deck</h3>
             <p>À Centrale Marseille, entreprendre c’est faire germer des idées lumineuses et responsables. À mi-chemin entre le jaune et le vert clair, cette nuance fraiche reflète bien l’esprit de notre pré-incubateur qui forme nos élèves à imaginer demain.</p>
+            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
           </div>
         </div>
       </div>
@@ -110,6 +111,7 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 import Couleurs from '@/components/tableau-couleurs'
 import Signature from '@/components/signature'
 
@@ -117,6 +119,7 @@ export default {
   name: 'Deck',
   data () {
     return {
+      path: publicPath,
       colors: [
       {
         Pantone:'BLUE 072',

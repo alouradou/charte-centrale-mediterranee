@@ -16,6 +16,7 @@
             <p>
               La Fondation Centrale Marseille ne se distingue pas par une couleur, car elle est portée directement par l’école. Elle se démarque uniquement par la composition typographique, afin de lui permettre une distinction juridique et une prise de parole autonome. 
             </p>
+            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
           </div>
         </div>
       </div>
@@ -88,9 +89,15 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 import Signature from '@/components/signature'
 export default {
   name: 'Fondation',
+  data () {
+    return {
+      path: publicPath
+    }
+  },
   components: {
     Signature
   }

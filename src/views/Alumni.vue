@@ -15,6 +15,7 @@
             <h3>Alumni</h3>
             <p>L’orange de Centrale Marseille Alumni marque l’énergie bienveillante de l’association et reste le témoin des multiples souvenirs et histoires faits sur le campus car elle correspond exactement au orange de l’ancienne charte. Cette volonté de continuité marque la pérennité des engagements et des missions de l’association des diplômés de Centrale Marseille.
             </p>
+            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
           </div>
         </div>
       </div>
@@ -68,6 +69,7 @@
 </template>
 
 <script>
+import { publicPath } from './../../vue.config.js'
 import Couleurs from '@/components/tableau-couleurs'
 import Signature from '@/components/signature'
 
@@ -75,6 +77,7 @@ export default {
   name: 'Alumni',
   data () {
     return {
+      path: publicPath,
       colors: [
       {
         Pantone:'BLUE 072',
