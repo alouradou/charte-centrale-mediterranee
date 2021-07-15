@@ -75,7 +75,10 @@
             </div>
           </div>
           <div class="pt-6"><h2>Couleurs</h2></div>
+          <h3>Principales</h3>
           <Couleurs :colors="colors"></Couleurs>
+          <h3>Secondaires</h3>
+          <Couleurs :colors="colors2"></Couleurs>
           <Signature 
             class="pt-6"
             logoUrl="img/logo-ex-ed.png"
@@ -122,7 +125,19 @@ export default {
         CMJN:'7, 5, 3, 0',
         RVB:'239, 240, 244',
         Hex:' #eff0f4'
-      }]
+      }],
+      colors2: [
+        {
+          CMJN:'97, 100, 4, 2',
+          RVB:'57, 3, 142',
+          Hex:'#39038e'
+        },
+        {
+          CMJN:'90, 87, 0, 0',
+          RVB:'73, 0, 188',
+          Hex:'#4900bc'
+        }
+      ]
     }
   },
 }

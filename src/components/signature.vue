@@ -23,7 +23,7 @@
               <p :style="style3">Pôle de l'Étoile</p>
               <p :style="style3">Technopôle de Château-Gombert</p>
               <p :style="style3">38, rue Frédéric Joliot-Curie</p>
-              <p :style="style3">13451 MARSEILLE cedex 13</p>
+              <p :style="style3">13013 MARSEILLE cedex 13</p>
             </div>
             <div style="padding-top: 10px;">
               <p :style="style3"><a href="https://www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
