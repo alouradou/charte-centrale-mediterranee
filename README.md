@@ -1,4 +1,7 @@
-# nouvelle-charte
+# signatures-associations
+
+## Result
+The result of this tool is available on http://alouradou.perso.centrale-marseille.fr/signature
 
 ## Project setup
 ```
