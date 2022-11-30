@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
 
 export default {
 
@@ -19,10 +18,10 @@ export default {
   props: ['size', 'url', 'type', 'poster'],
   computed: {
     videolink: function () {
-      return publicPath + this.url
+      return '/' + this.url
     },
     posterlink: function () {
-      return publicPath + this.poster
+      return '/' + this.poster
     }
   }
 }

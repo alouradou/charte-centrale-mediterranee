@@ -19,13 +19,13 @@
 </template>
 
 <script>
-  import { publicPath } from './../../vue.config.js'
-
   export default {
     name: 'intro',
-    data () {
-      return {
-        path: publicPath
+    computed: {
+      path: function () {
+        return process.env.NODE_ENV === 'production'
+        ? '/charte_graphique/'
+        : '/'
       }
     }
   }

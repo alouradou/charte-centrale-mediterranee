@@ -78,7 +78,6 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
 
 export default {
   name: 'Formulaire',
@@ -92,7 +91,6 @@ export default {
   data () {
     return {
       modifyRS: false,
-      path: publicPath,
       message: '',
       line1: '',
       line2: '',
@@ -112,6 +110,11 @@ export default {
     }
   },
   computed: {
+    path: function () {
+      process.env.NODE_ENV === 'production'
+      ? '/charte_graphique/'
+      : '/'
+    },
     style1: function () {
       return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },

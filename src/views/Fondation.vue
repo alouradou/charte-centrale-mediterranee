@@ -89,13 +89,14 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
-import Signature from '@/components/signature'
+import Signature from '@/components/signature.vue'
 export default {
   name: 'Fondation',
-  data () {
-    return {
-      path: publicPath
+  computed: {
+    path: function () {
+      process.env.NODE_ENV === 'production'
+      ? '/charte_graphique/'
+      : '/'
     }
   },
   components: {

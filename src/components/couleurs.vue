@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import tableauColor from '@/components/tableau-couleurs'
+  import tableauColor from '@/components/tableau-couleurs.vue'
 export default {
   name: 'couleurs',
   components: {

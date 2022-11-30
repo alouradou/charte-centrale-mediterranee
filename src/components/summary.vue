@@ -12,7 +12,7 @@
         <p class="big text-bigger"><strong>Nous avons un monde à transformer</strong></p>
       </div>
       <div class="text col-span-2 p-6">
-        <myPlyr url="video/logo.mp4" poster="img/signature.png"></myPlyr>
+        <myPlyr url="video/logo.mp4" type="video/mp4" poster="img/signature.png"></myPlyr>
       </div>
       <div class="text ">
         <h3>Vision</h3>
@@ -62,7 +62,7 @@
 
 <script>
 
-import myPlyr from '@/components/myPlyr'
+import myPlyr from '@/components/myPlyr.vue'
 
 export default {
   name: 'summary',
