@@ -22,13 +22,13 @@
 </template>
 
 <script>
-import menu2 from '@/components/menu2'
-import logo from '@/components/logo'
-import logoDetail from '@/components/logo-details'
-import typographie from '@/components/typographie'
-import couleurs from '@/components/couleurs'
-import signature from '@/components/signature'
-import gabarits from '@/components/gabarits'
+import menu2 from '@/components/menu2.vue'
+import logo from '@/components/logo.vue'
+import logoDetail from '@/components/logo-details.vue'
+import typographie from '@/components/typographie.vue'
+import couleurs from '@/components/couleurs.vue'
+import signature from '@/components/signature.vue'
+import gabarits from '@/components/gabarits.vue'
 
 
 export default {

@@ -1,53 +1,39 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-
-const routes = [
-  {
-    path: '/',
-    name: 'La marque',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
-  },
-  {
-    path: '/charte-graphique',
-    name: 'Charte graphique',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Charte.vue')
-  },
-  {
-    path: '/fondation',
-    name: 'La Fondation',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Fondation.vue')
-  },
-  {
-    path: '/alumni',
-    name: 'Alumni',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Alumni.vue')
-  },
-  {
-    path: '/exectutive-education',
-    name: 'Executive Education',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ExEd.vue')
-  },
-  {
-    path: '/le-deck',
-    name: 'Le Deck',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LeDeck.vue')
-  }
-]
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'La marque',
+      component: () => import("../views/Home.vue")
+    },
+    {
+      path: '/charte-graphique',
+      name: 'Charte graphique',
+      component: () => import('../views/Charte.vue')
+    },
+    {
+      path: '/fondation',
+      name: 'La Fondation',
+      component: () => import('../views/Fondation.vue')
+    },
+    {
+      path: '/alumni',
+      name: 'Alumni',
+      component: () => import('../views/Alumni.vue')
+    },
+    {
+      path: '/exectutive-education',
+      name: 'Executive Education',
+      component: () => import('../views/ExEd.vue')
+    },
+    {
+      path: '/le-deck',
+      name: 'Le Deck',
+      component: () => import('../views/LeDeck.vue')
+    }
+  ]
 })
 
-export default router
+export default router;

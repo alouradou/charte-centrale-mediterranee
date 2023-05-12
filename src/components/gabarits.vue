@@ -29,14 +29,13 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
 export default {
 
   name: 'gabarits',
 
   data () {
     return {
-      path: publicPath
+      path: '/'
     }
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div :id="$options.name">
-
     <intro></intro>
     
     <sum></sum>
@@ -10,9 +9,8 @@
 
 <script>
 // @ is an alias to /src
-import intro from '@/components/intro'
-import sum from '@/components/summary'
-
+import intro from '../components/intro.vue'
+import sum from '../components/summary.vue'
 export default {
   name: 'Home',
   components: {

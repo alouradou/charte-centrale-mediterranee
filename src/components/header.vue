@@ -38,14 +38,18 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
-
 export default {
   name: 'theHeader',
   data () {
     return {
-      isOpened: false,
-      path: publicPath
+      isOpened: false
+    }
+  },
+  computed: {
+    path: function () {
+      return process.env.NODE_ENV === 'production'
+        ? '/charte_graphique/'
+        : '/'
     }
   },
   methods: {

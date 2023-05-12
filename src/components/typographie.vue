@@ -25,14 +25,13 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
-import myPlyr from '@/components/myPlyr'
+import myPlyr from '@/components/myPlyr.vue'
 export default {
 
   name: 'typographie',
   data () {
     return {
-      path: publicPath
+      path: '/'
     }
   },
   components: {

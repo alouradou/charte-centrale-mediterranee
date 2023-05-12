@@ -69,15 +69,20 @@
 </template>
 
 <script>
-import { publicPath } from './../../vue.config.js'
-import Couleurs from '@/components/tableau-couleurs'
-import Signature from '@/components/signature'
+import Couleurs from '@/components/tableau-couleurs.vue'
+import Signature from '@/components/signature.vue'
 
 export default {
   name: 'Alumni',
+  computed: {
+    path: function () {
+      process.env.NODE_ENV === 'production'
+      ? '/charte_graphique/'
+      : '/'
+    }
+  },
   data () {
     return {
-      path: publicPath,
       colors: [
       {
         Pantone:'BLUE 072',

@@ -7,7 +7,7 @@
 
 
 <script>
-import theHeader from './components/header'
+import theHeader from './components/header.vue'
 export default {
   name: 'Home',
   components: {
