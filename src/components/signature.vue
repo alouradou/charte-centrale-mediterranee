@@ -1,68 +1,62 @@
 <template>
-  <div id="signature" class="chapter md:grid md:grid-cols-2 md:gap-6 my-6">
-    <div class="col-span-full">
-      <h2>Signature email</h2>
-    </div>
+
+
     <div class="formulaire py-0 my-0">
-      <div class="resultat" ref="copySignature">
-        <table>
-          <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Marseille" :src="absolutePath+logoUrl" :width="logoWidth" :height="logoHeight" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px;'" border="0">
-            <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
-              <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
-              <p :style="style1" v-if="line2">{{line2}}</p>
-              <p :style="style1" v-if="line3">{{line3}}</p>
-            </div>
-            <div style="padding-top: 10px;" v-if="line4 || telephone1 || telephone2">
-              <p :style="style1" v-if="line4">{{line4}}</p>
-              <p v-if="telephone1" :style="style1">Tél. <a :href="tel1">{{telephone1}}</a></p>
-              <p v-if="telephone2" :style="style1">Tél. <a :href="tel2">{{telephone2}}</a></p>
-            </div>
-            <div style="padding-top: 10px;">
-              <p :style="style2" style="font-weight: bold">Centrale Marseille</p>
-              <p :style="style3">Pôle de l'Étoile</p>
-              <p :style="style3">Technopôle de Château-Gombert</p>
-              <p :style="style3">38, rue Frédéric Joliot-Curie</p>
-              <p :style="style3">13013 MARSEILLE cedex 13</p>
-            </div>
-            <div style="padding-top: 10px;">
-              <p :style="style3"><a href="https://www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
-              <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a href="tel:+33491054545">tél. +33 (0)4 91 05 45 45</a></p>
-              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
-            </div>
-          </td>
-        </table>
+      <div v-if="asso==='bde'" class="resultat" ref="copySignature" style="padding:10px;">
+        <bde :asso="asso" :data="data"></bde>
+      </div>
+      <div v-else-if="asso==='foceen'" class="resultat" ref="copySignature" style="padding:10px;">
+        <foceen :asso="asso" :data="data"></foceen>
       </div>
     </div>
+
     <div class="champs py-0 my-0">
       <p>
-        <input class="line" type="text" v-model="line1" placeholder="Prénom Nom">
-        <input class="line" type="text" v-model="line2" placeholder="ligne 1">
-        <input class="line" type="text" v-model="line3" placeholder="ligne 2">
-        <input class="line" type="text" v-model="line4" placeholder="Bureau">
-        <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
-        <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
-      </p> 
+        <label class="px-2" for="selectAsso">Template : </label>
+        <select name="asso" id="selectAsso" style="vertical-align:baseline;" v-model="asso">
+          <option disabled value="">Choisir une association</option>
+          <option value="bde">BDE</option>
+          <option value="bds">BDS</option>
+          <option value="foceen">FOCEEN</option>
+          <option value="uaecm">UA</option>
+          <option value="tribune">La Tribune</option>
+          <option value="ginfo">GInfo</option>
+          <option value="isf">ISF</option>
+        </select>
+      </p>
+      <p>
+        <input id="modifyPersonalisation" class="checkbox" type="checkbox" v-model="modifyPersonalisation">
+        <label class="px-2" for="modifyPersonalisation">Personnaliser le template</label>
+      </p>
+      <p v-if="modifyPersonalisation" class="modifyRSinput pb-6">
+        <input class="line" type="url" v-model="logo" placeholder="Lien du logo">
+        <input class="line" type="text" v-model="mainColor" placeholder="Couleur principale">
+      </p>
+      <p class="modifyRSinput pb-6">
+        <input class="line" type="text" v-model="line1" placeholder="Prénom & Nom">
+        <input class="line" type="text" v-model="line2" placeholder="Poste">
+        <input class="line" type="text" v-model="line3" placeholder="Ligne 2">
+        <input class="line" type="tel" v-model="telephone1" placeholder="Téléphone">
+      </p>
       <div>
         <p>
           <input id="modifyRS" class="checkbox" type="checkbox" v-model="modifyRS">
-          <label class="px-2" for="modifyRS">Modifier les liens des réseaux sociaux</label>
+          <label class="px-2" for="modifyRS">Personnaliser les liens des icones</label>
         </p>
         <p v-if="modifyRS" class="modifyRSinput pb-6">
-          <input class="line" type="text" v-model="facebook" placeholder="facebook">
-          <input class="line" type="text" v-model="twitter" placeholder="twitter">
-          <input class="line" type="text" v-model="instagram" placeholder="instagram">
-          <input class="line" type="text" v-model="linkedin" placeholder="linkedin">
-          <input class="line" type="text" v-model="youtube" placeholder="youtube">
+          <span>⚠️ N'oubliez pas le "https://" !!</span>
+          <input class="line" type="url" v-model="facebook" placeholder="Facebook">
+          <input class="line" type="url" v-model="website" placeholder="Site Web">
+          <input class="line" type="email" v-model="mail" placeholder="Mail">
+          <input class="line" type="url" v-model="linkedin" placeholder="Linkedin">
         </p>
         <p>
           <button class="btn py-0 my-0" @click="doCopy">Copier la signature</button>
           <a class="py-0 my-0" @click="reset">Reset</a>
         </p>
       </div>
-
     </div>
-    
+
     <div class="text-smaller text-info py-0 my-0">
       <p class="text-valid">{{message}}</p>
       <p v-if="htmlVersion" ref="copyRawHtml">{{$refs.copySignature.innerHTML}}</p>
@@ -72,83 +66,166 @@
       <label class="px-2" for="checkHtml">code HTML (pour Thunderbird)</label>
       <p><button v-if="htmlVersion" class="info btn my-2" @click="doCopyHtml">Copier le code HTML</button></p>
     </div>
-    
-      
-  </div>
+
+
 </template>
 
 <script>
+// import { publicPath } from './../../vue.config.js'
+import Foceen from "@/components/templates-asso/foceen.vue";
+import Bde from "@/components/templates-asso/bde.vue";
+import TemplateAsso from "@/components/template-asso.vue";
 
 export default {
   name: 'Formulaire',
-  props: {
-    logoUrl: String,
-    logoWidth: Number,
-    logoHeight: Number,
-    color1: String,
-    color2: String
-  },
+  components: {TemplateAsso, Bde, Foceen},
   data () {
     return {
       modifyRS: false,
+      modifyPersonalisation:false,
+      // path: publicPath,
       message: '',
-      line1: '',
-      line2: '',
+      asso:'bde',
+      line1: 'Prénom Nom',
+      line2: 'Poste',
       line3: '',
-      line4: '',
+      mainColor: '',
       telephone1: '',
-      telephone2: '',
-      facebook: 'https://www.facebook.com/CentraleMarseille',
-      twitter: 'https://twitter.com/CentraleMars',
-      linkedin: 'https://www.linkedin.com/school/ecole-centrale-de-marseille/',
-      instagram: 'https://www.instagram.com/centralemarseille/',
-      youtube: 'https://www.youtube.com/user/CentraleMarseille/featured',
+      logo: '',
+      facebook: '',
+      website: '',
+      linkedin: '',
+      mail: '',
+      youtube: '',
       copythis: Object,
       validated: false,
       htmlVersion: false,
-      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;'
+      styleImg: '',
+      style1: '',
+      style2: '',
+      style3: '',
+      data:{}
     }
   },
   computed: {
-    path: function () {
-      process.env.NODE_ENV === 'production'
-      ? '/charte_graphique/'
-      : '/'
-    },
-    style1: function () {
-      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
-    },
-    style2: function () {
-      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
-    },
-    style3: function () {
-      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
-    },
     absolutePath: function () {
-      return 'https://com.centrale-marseille.fr/charte_graphique/'
+      return ''
     },
     tel1: function () {
-      return 'tel:' + this.telephone1.split(' ').join('')
+      let l = this.telephone1.split(' ').join('')
+      if (l[0] === "0") {
+        l = l.substring(1, 10)
+        let tel_formatted2 = "+33" + l
+        return 'tel:' + tel_formatted2
+      }
+      else if (l.substring(0,3) === "+33") {
+        let tel_formatted2 = "+33" + l.substring(3,12)
+        return 'tel:' + tel_formatted2
+      }
+      else {
+        return l
+      }
     },
     tel2: function () {
-      return 'tel:' + this.telephone2.split(' ').join('')
+      return 'tel:' + this.logo.split(' ').join('')
+    },
+    tel1_formatted: function format_tel(){
+      let l =  this.telephone1.split(' ').join('')
+      let tel_formatted1 = ""
+      if (l[0] === "0"){
+        l = l.substring(1,10)
+        tel_formatted1 = "+33 (0)" + l.substring(0,1) + " " + l.substring(1,3) + " "+ l.substring(3,5) + " " + l.substring(5,7) + " " + l.substring(7,9) + " " + l.substring(9,11)
+        return tel_formatted1
+      }
+      else if (l.substring(0,3) === "+33") {
+        tel_formatted1 = "+33 (0)" + l.substring(3,4) + " " + l.substring(4,6) + " " + l.substring(6,8) + " " + l.substring(8,10) + " " + l.substring(10,12)
+        return tel_formatted1
+      }
+      else {
+        return l
+      }
     },
     urlEncoded: function () {
-      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&line4=' + this.line4 + '&telephone1=' + this.telephone1 + '&telephone2=' + this.telephone2)
+      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&telephone1=' + this.telephone1 + '&asso=' + this.asso)
     }
   },
   mounted: function () {
     this.copythis = this.$refs.copythis
+    this.asso = this.$route.query.asso ? this.$route.query.asso : ''
     this.line1 = this.$route.query.line1 ? this.$route.query.line1 : ''
     this.line2 = this.$route.query.line2 ? this.$route.query.line2 : ''
     this.line3 = this.$route.query.line3 ? this.$route.query.line3 : ''
-    this.line4 = this.$route.query.line4 ? this.$route.query.line4 : ''
+    this.mainColor = this.$route.query.mainColor ? this.$route.query.mainColor : ''
     this.telephone1 = this.$route.query.telephone1 ? this.$route.query.telephone1 : ''
-    this.telephone2 = this.$route.query.telephone2 ? this.$route.query.telephone2 : ''
+    this.logo = this.$route.query.logo ? this.$route.query.logo : ''
+    this.setCompteur()
   },
   watch: {
     urlEncoded: function () {
-      this.$router.push({ query: { line1: this.line1, line2: this.line2, line3: this.line3, line4: this.line4, telephone1: this.telephone1, telephone2: this.telephone2 } })
+      if (this.asso === "ginfo") {
+        this.mainColor = '#44AC34'
+        this.website = "https://ginfo.asso.centrale-marseille.fr/"
+        this.mail = "ginfo@centrale-marseille.fr"
+        this.linkedin = ""
+      }
+      else if (this.asso === "bde") {
+        this.logo = "http://alouradou.perso.centrale-marseille.fr/images/signature_logo_bde.png"
+        this.mainColor = 'rgb(42,97,168)'
+        this.facebook = "https://www.facebook.com/bdecentralemarseille/"
+        this.website = "https://bde.asso.centrale-marseille.fr/"
+        this.mail = "bde@centrale-marseille.fr"
+        this.linkedin = "https://www.linkedin.com/company/bdeecm/"
+      }
+      else if (this.asso === "uaecm"){
+        this.logo = "https://zupimages.net/up/20/06/7qb4.png"
+        this.mainColor = ''
+        this.facebook = "https://www.facebook.com/ua.centrale.marseille/"
+        this.website = "https://uaecm.asso.centrale-marseille.fr/"
+        this.mail = "uaecm@centrale-marseille.fr"
+        this.linkedin = "https://www.linkedin.com/in/union-des-associations-6a0160185/"
+      }
+      else if (this.asso === "bds"){
+        this.logo = "http://alouradou.perso.centrale-marseille.fr/images/LOGO_BDS_.png"
+        this.mainColor = '#1A2248'
+        this.facebook = "https://www.facebook.com/bdscentralemarseille"
+        this.website = "https://bds.asso.centrale-marseille.fr/"
+        this.mail = "bds@centrale-marseille.fr"
+        this.linkedin = "https://www.linkedin.com/company/bds-centrale-marseille"
+      }
+      else if (this.asso === "tribune"){
+        this.logo = "http://alouradou.perso.centrale-marseille.fr/images/Logo_Tribune_ECM_mail.png"
+        this.mainColor = 'rgb(62,113,147)'
+        this.facebook = "https://www.facebook.com/tribunecm"
+        this.website = ""
+        this.mail = ""
+        this.linkedin = ""
+      }
+      else if (this.asso === "foceen"){
+        this.logo = "http://alouradou.perso.centrale-marseille.fr/images/foceen/logo.png"
+        this.mainColor = '#1A3745'
+        this.facebook = "https://www.facebook.com/FOCEEN"
+        this.website = "https://foceen-centrale-marseille.fr/"
+        this.mail = "forumentreprises@centrale-marseille.fr"
+        this.linkedin = "https://www.linkedin.com/company/forum-centrale-marseille-entreprises"
+      }
+      else { this.mainColor = '#00000' }
+
+      this.data = {
+        line1: this.line1,
+        line2: this.line2,
+        line3: this.line3,
+        mainColor: this.mainColor,
+        telephone1: this.telephone1,
+        tel1_formatted: this.tel1_formatted,
+        logo: this.logo,
+        asso: this.asso,
+        facebook: this.facebook,
+        website: this.website,
+        mail: this.mail,
+        linkedin: this.linkedin
+      }
+
+      this.$router.push({ query: { line1: this.line1, line2: this.line2, line3: this.line3, mainColor: this.mainColor, telephone1: this.telephone1, logo: this.logo, asso: this.asso } })
     }
   },
   methods: {
@@ -157,9 +234,9 @@ export default {
       this.line1= '';
       this.line2= '';
       this.line3= '';
-      this.line4= '';
+      this.mainColor= '';
       this.telephone1= '';
-      this.telephone2= '';
+      this.logo= '';
       this.copyMessage= '';
       this.message = ''
     },
@@ -185,23 +262,33 @@ export default {
     },
     doCopyHtml: function () {
       this.validated = true;
-      this.selectText(this.$refs.copyRawHtml);  
+      this.selectText(this.$refs.copyRawHtml);
       document.execCommand("copy");
       this.message = 'code html copié'
+    },
+    setCompteur: function () {
+      fetch("./compteur.php")
+          .then((result) => { return result.json() })
+          .then(res => { document.getElementById("compteur").innerText = res.compte + ' personnes ont déjà crée leur signature avec cet outil !' })
+          .catch(res => { console.log('Fetch error : ' + res) })
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  input {
-    background: #fff;
-    border: 1px solid #eff0f4!important;
-    padding: 15px;
-  }
-  .modifyRSinput input {
-    width: 100%;
-  }
-  
+<style lang="scss">
+input {
+  background: #fff;
+  border: 1px solid #eff0f4!important;
+  padding: 15px;
+}
+.modifyRSinput input {
+  width: 100%;
+}
+iframe.youtube{
+  width: 560px;
+  height: 315px;
+}
+
 </style>
