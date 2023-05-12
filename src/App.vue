@@ -1,19 +1,19 @@
 <template>
-  <theHeader></theHeader>
+<!--  <theHeader></theHeader>-->
   <section>
-    <router-view/>  
+    <router-view/>
   </section>
 </template>
 
 
 <script>
-import theHeader from './components/header.vue'
+// import theHeader from './components/header.vue'
 export default {
   name: 'Home',
   components: {
-    theHeader
+    // theHeader
   }
-} 
+}
 </script>
 
 <style lang="scss">
