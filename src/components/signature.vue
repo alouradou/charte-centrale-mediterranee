@@ -5,6 +5,9 @@
       <div v-if="asso==='bde'" class="resultat" ref="copySignature" style="padding:10px;">
         <bde :asso="asso" :data="data"></bde>
       </div>
+      <div v-if="asso==='bds'" class="resultat" ref="copySignature" style="padding:10px;">
+        <bds :asso="asso" :data="data"></bds>
+      </div>
       <div v-else-if="asso==='foceen'" class="resultat" ref="copySignature" style="padding:10px;">
         <foceen :asso="asso" :data="data"></foceen>
       </div>
@@ -71,19 +74,20 @@
 </template>
 
 <script>
-// import { publicPath } from './../../vue.config.js'
 import Foceen from "@/components/templates-asso/foceen.vue";
 import Bde from "@/components/templates-asso/bde.vue";
+import Bds from "@/components/templates-asso/bds.vue";
 import TemplateAsso from "@/components/template-asso.vue";
+// import here the new templates
+
 
 export default {
   name: 'Formulaire',
-  components: {TemplateAsso, Bde, Foceen},
+  components: {TemplateAsso, Bde, Foceen, Bds}, // add here the new templates
   data () {
     return {
       modifyRS: false,
       modifyPersonalisation:false,
-      // path: publicPath,
       message: '',
       asso:'bde',
       line1: 'Prénom Nom',
