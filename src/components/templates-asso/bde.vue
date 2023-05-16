@@ -8,7 +8,7 @@
               </span>
       </td>
       <td class="logo" style="padding: 10px">
-            <span v-bind:style="'color:'+mainColor+';font-family: Verdana, Arial, Sans-Serif; font-size: 10pt; margin-top: 0pt;'">
+            <span v-bind:style="'color:'+data.mainColor+';font-family: Verdana, Arial, Sans-Serif; font-size: 10pt; margin-top: 0pt;'">
               <div style="" v-if="data.line1 || data.line2 || data.line3">
                 <span style="font-weight: bold" v-if="data.line1">{{data.line1}}</span><br>
                 <span v-if="data.line2">{{data.line2}}</span><br>
