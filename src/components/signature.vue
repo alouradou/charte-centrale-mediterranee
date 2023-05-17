@@ -151,6 +151,22 @@ export default {
     },
     urlEncoded: function () {
       return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&telephone1=' + this.telephone1 + '&asso=' + this.asso)
+    },
+    data() {
+      return {
+        line1: this.line1,
+        line2: this.line2,
+        line3: this.line3,
+        mainColor: this.mainColor,
+        telephone1: this.telephone1,
+        tel1_formatted: this.tel1_formatted,
+        logo: this.logo,
+        asso: this.asso,
+        facebook: this.facebook,
+        website: this.website,
+        mail: this.mail,
+        linkedin: this.linkedin
+      };
     }
   },
   mounted: function () {
@@ -165,7 +181,7 @@ export default {
     this.setCompteur()
   },
   watch: {
-    urlEncoded: function () {
+    asso: function () {
       if (this.asso === "ginfo") {
         this.mainColor = '#44AC34'
         this.website = "https://ginfo.asso.centrale-marseille.fr/"
@@ -213,22 +229,8 @@ export default {
         this.linkedin = "https://www.linkedin.com/company/forum-centrale-marseille-entreprises"
       }
       else { this.mainColor = '#00000' }
-
-      this.data = {
-        line1: this.line1,
-        line2: this.line2,
-        line3: this.line3,
-        mainColor: this.mainColor,
-        telephone1: this.telephone1,
-        tel1_formatted: this.tel1_formatted,
-        logo: this.logo,
-        asso: this.asso,
-        facebook: this.facebook,
-        website: this.website,
-        mail: this.mail,
-        linkedin: this.linkedin
-      }
-
+    },
+    urlEncoded: function () {
       this.$router.push({ query: { line1: this.line1, line2: this.line2, line3: this.line3, mainColor: this.mainColor, telephone1: this.telephone1, logo: this.logo, asso: this.asso } })
     }
   },
