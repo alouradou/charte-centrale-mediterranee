@@ -21,8 +21,8 @@
             </td>
             <td nowrap="" align="left"><a v-bind:href="data.linkedin" target="MwOjAUe9m68Xb8bXgrMMGc5" rel="noopener noreferrer"><img alt="" src="https://images2.imgbox.com/4a/a0/MJXI5TLE_o.png" height="25" border="0"></a><br>
             </td>
-            <td align="left"><a v-bind:href="'tel:'+data.telephone1"><img alt="" src="https://images2.imgbox.com/7d/fd/jNaIgJvb_o.png" height="25"></a></td>
-            <td align="left"><a v-bind:href="'tel:'+data.telephone1" style="font-size:9pt;font-family: Verdana, Arial,Sans-Serif;white-space: nowrap"> <font color="black">{{ data.tel1_formatted }}</font><br></a> </td>
+            <td align="left"><a v-bind:href="+data.tel1"><img alt="" src="https://images2.imgbox.com/7d/fd/jNaIgJvb_o.png" height="25"></a></td>
+            <td align="left"><a v-bind:href="+data.tel1" style="font-size:9pt;font-family: Verdana, Arial,Sans-Serif;white-space: nowrap"> <font color="black">{{ data.tel1_formatted }}</font><br></a> </td>
           </tr>
           </tbody>
         </table>
@@ -46,6 +46,7 @@ export default {
       mainColor: this.data.mainColor,
       telephone1: this.data.telephone1,
       tel1_formatted: this.data.tel1_formatted,
+      tel1: this.data.tel1,
       logo: this.data.logo,
       facebook: this.data.facebook,
       website: this.data.website,

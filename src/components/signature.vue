@@ -115,7 +115,7 @@ export default {
     absolutePath: function () {
       return ''
     },
-    tel1: function () {
+    tel1: function () { // return the telephone number with the good format to call with "tel:"
       let l = this.telephone1.split(' ').join('')
       if (l[0] === "0") {
         l = l.substring(1, 10)
@@ -133,7 +133,7 @@ export default {
     tel2: function () {
       return 'tel:' + this.logo.split(' ').join('')
     },
-    tel1_formatted: function format_tel(){
+    tel1_formatted: function format_tel(){ // return the telephone number with the good format to display for human reading
       let l =  this.telephone1.split(' ').join('')
       let tel_formatted1 = ""
       if (l[0] === "0"){
@@ -160,6 +160,7 @@ export default {
         mainColor: this.mainColor,
         telephone1: this.telephone1,
         tel1_formatted: this.tel1_formatted,
+        tel1: this.tel1,
         logo: this.logo,
         asso: this.asso,
         facebook: this.facebook,

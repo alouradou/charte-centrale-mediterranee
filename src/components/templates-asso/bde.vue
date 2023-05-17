@@ -43,11 +43,11 @@
               </a>
             </td>
             <td v-if="data.telephone1">
-              <a v-bind:href="data.telephone1">
+              <a v-bind:href="data.tel1">
                 <img alt="" src="http://alouradou.perso.centrale-marseille.fr/images/signature_telephone.png" width="25" height="25">
               </a>
             </td>
-            <td v-if="data.telephone1"><a v-bind:href="data.telephone1" style="text-decoration: none;">
+            <td v-if="data.telephone1"><a v-bind:href="data.tel1" style="text-decoration: none;">
                 <span style="font-size: 9pt;font-family: Verdana, Arial, Sans-Serif;white-space: nowrap;color:black;">
                     {{data.tel1_formatted}}
                 </span>
@@ -74,6 +74,7 @@ export default {
       mainColor: this.data.mainColor,
       telephone1: this.data.telephone1,
       tel1_formatted: this.data.tel1_formatted,
+      tel1: this.data.tel1,
       logo: this.data.logo,
       facebook: this.data.facebook,
       website: this.data.website,
