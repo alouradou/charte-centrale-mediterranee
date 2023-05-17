@@ -27,14 +27,11 @@ jobs:
       - name: Build project
         run: pnpm run build
 
-      - name: Rename dist folder
-        run: mv dist signature
-
       - name: Set up SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.SFTP_SERVER }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ./dist
+          local-dir: ./dist/
           server-dir: ~/html/signature-test/
