@@ -14,7 +14,7 @@
     </div>
 
     <div class="champs py-0 my-0">
-      <p>
+      <p class="select-container">
         <label class="px-2" for="selectAsso">Template : </label>
         <select name="asso" id="selectAsso" style="vertical-align:baseline;" v-model="asso">
           <option disabled value="">Choisir une association</option>
@@ -297,5 +297,55 @@ iframe.youtube{
   width: 560px;
   height: 315px;
 }
+
+
+/* Styles pour le conteneur du menu déroulant */
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styles pour l'élément select */
+.select-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Styles pour la flèche à droite */
+.select-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("/public/img/fleche-puce-bleue.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Styles pour la flèche en surbrillance lorsque le menu déroulant est ouvert */
+.select-container.select-open::after {
+  background-image: url("/public/img/fleche-puce-bleue.svg");
+}
+
+/* Styles pour le texte de l'option sélectionnée */
+.select-container select option {
+  color: #555;
+}
+
+/* Styles pour le texte de l'option sélectionnée */
+.select-container select option:checked {
+  font-weight: bold;
+}
+
 
 </style>
