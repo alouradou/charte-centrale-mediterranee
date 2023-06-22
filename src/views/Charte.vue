@@ -9,7 +9,7 @@
           <couleurs></couleurs>
           <signature-med
               :logoWidth="134"
-              logoUrl="src/assets/img/logo-med.png"
+              logoUrl="img/logo-med.png"
               color1="#000f9f"
               color2="#4d5f80"></signature-med>
           <signature
