@@ -7,10 +7,10 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Mediterranée" :src="logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 9px;'" border="0">
+            <img alt="logo Centrale Mediterranée" :src="absolutePath+logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 9px;'" border="0">
             <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
               <span>{{messageImp}}</span>
-              <img :style="styleArrow" border="0" width="7" height="7" :src="'../src/assets/img/fleche-puce-blanche.svg'" alt="Facebook">
+              <img :style="styleArrow" border="0" width="7" height="7" :src="absolutePath+'img/fleche-puce-blanche.svg'" alt="Facebook">
             </div>
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
@@ -158,7 +158,8 @@ export default {
       return 'background-color: '+this.color1+'; color: white;'
     },
     absolutePath: function () {
-      return 'https://com.centrale-marseille.fr/charte_graphique/'
+      // return 'https://com.centrale-marseille.fr/charte_graphique/'
+      return 'https://alouradou.perso.centrale-marseille.fr/signature-med/'
     },
     tel1: function () {
       return 'tel:' + this.telephone1.split(' ').join('')
@@ -237,13 +238,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-input {
+<style lang="scss">
+#signature input {
   background: #fff;
   border: 1px solid #eff0f4!important;
   padding: 15px;
 }
-.modifyRSinput input {
+#signature .modifyRSinput input {
   width: 100%;
 }
 
