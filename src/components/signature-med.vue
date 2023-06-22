@@ -8,6 +8,10 @@
         <table>
           <td class="logo" style="padding: 10px">
             <img alt="logo Centrale Mediterranée" :src="logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 9px;'" border="0">
+            <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
+              <span>{{messageImp}}</span>
+              <img :style="styleArrow" border="0" width="7" height="7" :src="'../src/assets/img/fleche-puce-blanche.svg'" alt="Facebook">
+            </div>
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -48,6 +52,7 @@
         <input class="line" type="text" v-model="line4" placeholder="Bureau">
         <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
+        <input class="line" type="text" v-model="messageImp" placeholder="Bandeau important" :style="styleInputMessageImp">
       </p>
       <div>
         <p>
@@ -112,6 +117,7 @@ export default {
       line4: '',
       telephone1: '',
       telephone2: '',
+      messageImp: '',
       facebook: 'https://www.facebook.com/CentraleMediterranee',
       twitter: 'https://twitter.com/centrale_med',
       linkedin: 'https://www.linkedin.com/school/centralemediterranee/',
@@ -120,7 +126,8 @@ export default {
       copythis: Object,
       validated: false,
       htmlVersion: false,
-      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;'
+      styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;',
+      styleArrow: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-left: 6px; padding-bottom: 5px; float: right;'
     }
   },
   computed: {
@@ -128,6 +135,9 @@ export default {
       process.env.NODE_ENV === 'production'
           ? '/charte_graphique/'
           : '/'
+    },
+    style0: function () { // Bandeau important
+      return 'padding: 4px 10px; margin: 0; font-size: 10pt; color: white; background-color:'+this.color1+'; font-family: Arial, sans-serif; font-weight: bold; margin-left:22px; width: fit-content;'
     },
     style1: function () {
       return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
@@ -144,6 +154,9 @@ export default {
     styleA2: function () {
       return 'color: '+this.color2+'; text-decoration: none;'
     },
+    styleInputMessageImp: function () {
+      return 'background-color: '+this.color1+'; color: white;'
+    },
     absolutePath: function () {
       return 'https://com.centrale-marseille.fr/charte_graphique/'
     },
@@ -154,7 +167,7 @@ export default {
       return 'tel:' + this.telephone2.split(' ').join('')
     },
     urlEncoded: function () {
-      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&line4=' + this.line4 + '&telephone1=' + this.telephone1 + '&telephone2=' + this.telephone2)
+      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&line4=' + this.line4 + '&telephone1=' + this.telephone1 + '&telephone2=' + this.telephone2 + '&message=' + this.messageImp + '&campus=' + (this.addressMars + 2*this.addressNice))
     }
   },
   mounted: function () {
@@ -165,10 +178,17 @@ export default {
     this.line4 = this.$route.query.line4 ? this.$route.query.line4 : ''
     this.telephone1 = this.$route.query.telephone1 ? this.$route.query.telephone1 : ''
     this.telephone2 = this.$route.query.telephone2 ? this.$route.query.telephone2 : ''
+    this.messageImp = this.$route.query.message ? this.$route.query.message : ''
+    this.addressMars = this.$route.query.campus === '1' || this.$route.query.campus === '3'
+    this.addressNice = this.$route.query.campus === '2' || this.$route.query.campus === '3'
   },
   watch: {
     urlEncoded: function () {
-      this.$router.push({ query: { line1: this.line1, line2: this.line2, line3: this.line3, line4: this.line4, telephone1: this.telephone1, telephone2: this.telephone2 } })
+      this.$router.push({
+        query: { line1: this.line1, line2: this.line2, line3: this.line3, line4: this.line4,
+          telephone1: this.telephone1, telephone2: this.telephone2,
+          message: this.messageImp,
+          campus: this.addressMars + 2*this.addressNice} }) // 0: no address, 1: mars, 2: nice, 3: both
     }
   },
   methods: {
