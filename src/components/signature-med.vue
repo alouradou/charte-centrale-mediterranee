@@ -179,6 +179,7 @@ export default {
     this.telephone1 = this.$route.query.telephone1 ? this.$route.query.telephone1 : ''
     this.telephone2 = this.$route.query.telephone2 ? this.$route.query.telephone2 : ''
     this.messageImp = this.$route.query.message ? this.$route.query.message : ''
+    this.$route.query.campus = '3'
     this.addressMars = this.$route.query.campus === '1' || this.$route.query.campus === '3'
     this.addressNice = this.$route.query.campus === '2' || this.$route.query.campus === '3'
   },
@@ -201,7 +202,9 @@ export default {
       this.telephone1= '';
       this.telephone2= '';
       this.copyMessage= '';
-      this.message = ''
+      this.message = '';
+      this.messageImp = '';
+      this.campus = 3;
     },
     selectText(element) {
       let range;
