@@ -25,9 +25,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### Production on static server
-Edit vue.config.js line 5 : `? '/signature/'` with the path where it WILL be deployed
+
+To deploy in signature-med folder on static server, use :
 ```
-pnpm run build
+ vite build --base=/signature-med/
 ```
 
-Result in `./dist` folder, rename it into `./signature` or whatever you put on line 5 of vue.config.js and place it into your static server
+Default behaviour of `vite build` is:
+```
+vite build --base=/
+```
+
+Result in `./dist` folder, rename it into `./signature` or whatever you put after `--base=` 
+and place it into your static server.
