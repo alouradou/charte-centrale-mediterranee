@@ -18,14 +18,14 @@
               <p v-if="telephone1" :style="style1">Tél. <a :style="styleA2" :href="tel1">{{telephone1}}</a></p>
               <p v-if="telephone2" :style="style1">Tél. <a :style="styleA2" :href="tel2">{{telephone2}}</a></p>
             </div>
-            <div style="padding-top: 10px;">
+            <div v-if="addressMars" style="padding-top: 10px;">
               <p :style="style2" style="font-weight: bold">Campus Marseille</p>
               <p :style="style3">Technopôle Château-Gombert</p>
               <p :style="style3">38 rue Frédéric Joliot-Curie</p>
               <p :style="style3">13013 Marseille</p>
               <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a :style="styleA1" href="tel:+33491054545">tél. +33 (0)4 91 05 45 45</a></p>
             </div>
-            <div style="padding-top: 10px;">
+            <div v-if="addressNice" style="padding-top: 10px;">
               <p :style="style2" style="font-weight: bold">Campus Nice</p>
               <p :style="style3">Bâtiment Premium Méridia</p>
               <p :style="style3">61/63, avenue Simone Veil</p>
@@ -50,6 +50,12 @@
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
       </p>
       <div>
+        <p>
+          <input id="addressMars" class="checkbox" type="checkbox" v-model="addressMars">
+          <label class="px-2" for="modifyRS">Marseille</label>
+          <input id="addressNice" class="checkbox" type="checkbox" v-model="addressNice">
+          <label class="px-2" for="modifyRS">Nice</label>
+        </p>
         <p>
           <input id="modifyRS" class="checkbox" type="checkbox" v-model="modifyRS">
           <label class="px-2" for="modifyRS">Modifier les liens des réseaux sociaux</label>
@@ -97,6 +103,8 @@ export default {
   data () {
     return {
       modifyRS: false,
+      addressMars: true,
+      addressNice: true,
       message: '',
       line1: '',
       line2: '',
