@@ -11,10 +11,10 @@
           <div class="pt-6">
             <h3>Centrale Marseille et ses marques filles</h3>
             <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>          
+            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
             <h3>La Fondation</h3>
             <p>
-              La Fondation Centrale Marseille ne se distingue pas par une couleur, car elle est portée directement par l’école. Elle se démarque uniquement par la composition typographique, afin de lui permettre une distinction juridique et une prise de parole autonome. 
+              La Fondation Centrale Marseille ne se distingue pas par une couleur, car elle est portée directement par l’école. Elle se démarque uniquement par la composition typographique, afin de lui permettre une distinction juridique et une prise de parole autonome.
             </p>
             <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
           </div>
@@ -74,7 +74,13 @@
               <img class="light" src="../assets/img/picto-noir-blanc-zExcl.png" alt="picto">
             </div>
           </div>
-          <Signature 
+          <signature-med
+              :logoWidth="134"
+              logoUrl="img/fondation-2.png"
+              color1="#000f9f"
+              color2="#4d5f80">
+          </signature-med>
+          <Signature
             class="pt-6"
             logoUrl="img/fondation-2.png"
             :logoWidth="102"
@@ -90,6 +96,7 @@
 
 <script>
 import Signature from '@/components/signature.vue'
+import signatureMed from "@/components/signature-med.vue";
 export default {
   name: 'Fondation',
   computed: {
@@ -100,6 +107,7 @@ export default {
     }
   },
   components: {
+    signatureMed,
     Signature
   }
 }

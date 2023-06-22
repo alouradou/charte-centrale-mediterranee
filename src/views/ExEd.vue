@@ -11,7 +11,7 @@
           <div class="pt-6">
             <h3>Centrale Marseille et ses marques filles</h3>
               <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-              Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>  
+              Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
             <h3>Executive Education</h3>
             <p>
   Centrale Marseille Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
@@ -79,7 +79,13 @@
           <Couleurs :colors="colors"></Couleurs>
           <h3>Secondaires</h3>
           <Couleurs :colors="colors2"></Couleurs>
-          <Signature 
+          <signature-med
+              :logoWidth="134"
+              logoUrl="img/logo-ex-ed.png"
+              color1="#000f9f"
+              color2="#250e62">
+          </signature-med>
+          <Signature
             class="pt-6"
             logoUrl="img/logo-ex-ed.png"
             :logoWidth="111"
@@ -96,10 +102,12 @@
 <script>
 import Couleurs from '@/components/tableau-couleurs.vue'
 import Signature from '@/components/signature.vue'
+import signatureMed from "@/components/signature-med.vue";
 
 export default {
   name: 'ExecutiveEducation',
   components: {
+    signatureMed,
     Couleurs,
     Signature
   },

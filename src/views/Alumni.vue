@@ -11,7 +11,7 @@
           <div class="pt-6">
             <h3>Centrale Marseille et ses marques filles</h3>
             <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>          
+            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
             <h3>Alumni</h3>
             <p>L’orange de Centrale Marseille Alumni marque l’énergie bienveillante de l’association et reste le témoin des multiples souvenirs et histoires faits sur le campus car elle correspond exactement au orange de l’ancienne charte. Cette volonté de continuité marque la pérennité des engagements et des missions de l’association des diplômés de Centrale Marseille.
             </p>
@@ -54,7 +54,13 @@
           </div>
           <div class="pt-6"><h2>Couleurs</h2></div>
           <Couleurs :colors="colors"></Couleurs>
-          <Signature 
+          <signature-med
+              :logoWidth="134"
+              logoUrl="img/logo-alumni.png"
+              color1="#000f9f"
+              color2="#eb7708">
+          </signature-med>
+          <Signature
             class="pt-6"
             logoUrl="img/logo-alumni.png"
             :logoWidth="113"
@@ -71,6 +77,7 @@
 <script>
 import Couleurs from '@/components/tableau-couleurs.vue'
 import Signature from '@/components/signature.vue'
+import signatureMed from "@/components/signature-med.vue";
 
 export default {
   name: 'Alumni',
@@ -105,6 +112,7 @@ export default {
     }
   },
   components: {
+    signatureMed,
     Couleurs,
     Signature
   }
