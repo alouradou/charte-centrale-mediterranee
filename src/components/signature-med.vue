@@ -15,19 +15,25 @@
             </div>
             <div style="padding-top: 10px;" v-if="line4 || telephone1 || telephone2">
               <p :style="style1" v-if="line4">{{line4}}</p>
-              <p v-if="telephone1" :style="style1">Tél. <a :href="tel1">{{telephone1}}</a></p>
-              <p v-if="telephone2" :style="style1">Tél. <a :href="tel2">{{telephone2}}</a></p>
+              <p v-if="telephone1" :style="style1">Tél. <a :style="styleA2" :href="tel1">{{telephone1}}</a></p>
+              <p v-if="telephone2" :style="style1">Tél. <a :style="styleA2" :href="tel2">{{telephone2}}</a></p>
             </div>
             <div style="padding-top: 10px;">
-              <p :style="style2" style="font-weight: bold">Centrale Marseille</p>
-              <p :style="style3">Pôle de l'Étoile</p>
-              <p :style="style3">Technopôle de Château-Gombert</p>
-              <p :style="style3">38, rue Frédéric Joliot-Curie</p>
-              <p :style="style3">13013 MARSEILLE cedex 13</p>
+              <p :style="style2" style="font-weight: bold">Campus Marseille</p>
+              <p :style="style3">Technopôle Château-Gombert</p>
+              <p :style="style3">38 rue Frédéric Joliot-Curie</p>
+              <p :style="style3">13013 Marseille</p>
+              <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a :style="styleA1" href="tel:+33491054545">tél. +33 (0)4 91 05 45 45</a></p>
             </div>
             <div style="padding-top: 10px;">
-              <p :style="style3"><a href="https://www.centrale-marseille.fr">https://centrale-marseille.fr</a></p>
-              <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a href="tel:+33491054545">tél. +33 (0)4 91 05 45 45</a></p>
+              <p :style="style2" style="font-weight: bold">Campus Nice</p>
+              <p :style="style3">Bâtiment Premium Méridia</p>
+              <p :style="style3">61/63, avenue Simone Veil</p>
+              <p :style="style3">06200 Nice</p>
+              <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a :style="styleA1" href="tel:+33491054647">tél. +33 (0)4 91 05 46 47</a></p>
+            </div>
+            <div style="padding-top: 10px;">
+              <p :style="style3"><a :style="styleA1" href="https://www.centrale-mediterranee.fr">https://centrale-mediterranee.fr</a></p>
               <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
@@ -98,10 +104,10 @@ export default {
       line4: '',
       telephone1: '',
       telephone2: '',
-      facebook: 'https://www.facebook.com/CentraleMarseille',
-      twitter: 'https://twitter.com/CentraleMars',
-      linkedin: 'https://www.linkedin.com/school/ecole-centrale-de-marseille/',
-      instagram: 'https://www.instagram.com/centralemarseille/',
+      facebook: 'https://www.facebook.com/CentraleMediterranee',
+      twitter: 'https://twitter.com/centrale_med',
+      linkedin: 'https://www.linkedin.com/school/centralemediterranee/',
+      instagram: 'https://www.instagram.com/centralemed/',
       youtube: 'https://www.youtube.com/user/CentraleMarseille/featured',
       copythis: Object,
       validated: false,
@@ -123,6 +129,12 @@ export default {
     },
     style3: function () {
       return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
+    styleA1: function () {
+      return 'color: '+this.color1+'; text-decoration: none;'
+    },
+    styleA2: function () {
+      return 'color: '+this.color2+'; text-decoration: none;'
     },
     absolutePath: function () {
       return 'https://com.centrale-marseille.fr/charte_graphique/'
