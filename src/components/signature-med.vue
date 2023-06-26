@@ -8,10 +8,12 @@
         <table>
           <td class="logo" style="padding: 10px">
             <img alt="logo Centrale Mediterranée" :src="absolutePath+logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 9px;'" border="0">
-            <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
-              <span>{{messageImp}}</span>
-              <img :style="styleArrow" border="0" width="7" height="7" :src="absolutePath+'img/fleche-puce-blanche.svg'" alt="Facebook">
-            </div>
+            <a :href="urlImp">
+              <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
+                <span>{{messageImp}}</span>
+                <img :style="styleArrow" border="0" width="7" height="7" :src="absolutePath+'img/fleche-puce-blanche.svg'" alt="Facebook">
+              </div>
+            </a>
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
               <p :style="style1" style="font-weight: bold" v-if="line1">{{line1}}</p>
               <p :style="style1" v-if="line2">{{line2}}</p>
@@ -53,6 +55,7 @@
         <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
         <input class="line" type="text" v-model="messageImp" placeholder="Bandeau important" :style="styleInputMessageImp">
+        <input class="line" type="text" v-model="urlImp" placeholder="Url important" :style="styleInputMessageImp">
       </p>
       <div>
         <p>
@@ -118,6 +121,7 @@ export default {
       telephone1: '',
       telephone2: '',
       messageImp: '',
+      urlImp: '',
       facebook: 'https://www.facebook.com/CentraleMediterranee',
       twitter: 'https://twitter.com/centrale_med',
       linkedin: 'https://www.linkedin.com/school/centralemediterranee/',
@@ -168,7 +172,7 @@ export default {
       return 'tel:' + this.telephone2.split(' ').join('')
     },
     urlEncoded: function () {
-      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&line4=' + this.line4 + '&telephone1=' + this.telephone1 + '&telephone2=' + this.telephone2 + '&message=' + this.messageImp + '&campus=' + (this.addressMars + 2*this.addressNice))
+      return encodeURI('line1=' + this.line1 + '&line2=' + this.line2 + '&line3=' + this.line3 + '&line4=' + this.line4 + '&telephone1=' + this.telephone1 + '&telephone2=' + this.telephone2 + '&message=' + this.messageImp  + '&urlmsg=' + this.urlImp + '&campus=' + (this.addressMars + 2*this.addressNice))
     }
   },
   mounted: function () {
@@ -180,6 +184,7 @@ export default {
     this.telephone1 = this.$route.query.telephone1 ? this.$route.query.telephone1 : ''
     this.telephone2 = this.$route.query.telephone2 ? this.$route.query.telephone2 : ''
     this.messageImp = this.$route.query.message ? this.$route.query.message : ''
+    this.urlImp = this.$route.query.urlmsg ? this.$route.query.urlmsg : ''
     this.$route.query.campus = '3'
     this.addressMars = this.$route.query.campus === '1' || this.$route.query.campus === '3'
     this.addressNice = this.$route.query.campus === '2' || this.$route.query.campus === '3'
@@ -189,7 +194,7 @@ export default {
       this.$router.push({
         query: { line1: this.line1, line2: this.line2, line3: this.line3, line4: this.line4,
           telephone1: this.telephone1, telephone2: this.telephone2,
-          message: this.messageImp,
+          message: this.messageImp, urlmsg: this.urlImp,
           campus: this.addressMars + 2*this.addressNice} }) // 0: no address, 1: mars, 2: nice, 3: both
     }
   },
@@ -205,6 +210,7 @@ export default {
       this.copyMessage= '';
       this.message = '';
       this.messageImp = '';
+      this.urlImp ='';
       this.campus = 3;
     },
     selectText(element) {
@@ -238,13 +244,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-#signature input {
+<style  lang="scss">
+input {
   background: #fff;
   border: 1px solid #eff0f4!important;
   padding: 15px;
 }
-#signature .modifyRSinput input {
+.modifyRSinput input {
   width: 100%;
 }
 
