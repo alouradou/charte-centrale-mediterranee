@@ -5,94 +5,32 @@
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
           <div>
             <h1>
-              <img src="../assets/img/ex-ed/logo-Centrale-Marseille-Executive-education.png" alt="logo Executive Education">
+              <img src="../assets/img/ex-ed/ExEd-med.svg" alt="logo Executive Education">
             </h1>
           </div>
           <div class="pt-6">
-            <h3>Centrale Marseille et ses marques filles</h3>
-              <p>Toutes les activités portées par Centrale Marseille s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
+            <h3>Centrale Méditerranée et ses marques filles</h3>
+              <p>Toutes les activités portées par Centrale Méditerranée s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
               Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
             <h3>Executive Education</h3>
             <p>
-  Centrale Marseille Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
+  Centrale Méditerranée Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
             </p>
-            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>
+<!--            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>-->
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="content md:grid md:grid-cols-4 md:gap-6">
+      <div class="content">
         <div class="text col-span-3">
-          <div class="pb-6"><h2>Logo</h2></div>
-          <div class="chapter grid grid-cols-3 gap-6">
-            <div>
-              <img class="light" src="../assets/img/ex-ed/logo-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end exed">
-              <img src="../assets/img/ex-ed/logo-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="light">
-              <img src="../assets/img/ex-ed/logo-violet-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end dark">
-              <img src="../assets/img/ex-ed/logo-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end light">
-              <img src="../assets/img/ex-ed/logo-bleu-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end black">
-              <img src="../assets/img/ex-ed/logo-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-          </div>
-          <div class="chapter grid grid-cols-2 gap-6">
-            <h3 class="col-span-full mt-6 mb-0">Version horizontale</h3>
-            <div class="light ">
-              <img src="../assets/img/ex-ed/logo-2-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end exed">
-              <img src="../assets/img/ex-ed/logo-2-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="light">
-              <img src="../assets/img/ex-ed/logo-2-violet-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end dark">
-              <img src="../assets/img/ex-ed/logo-2-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end light">
-              <img src="../assets/img/ex-ed/logo-2-bleu-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-            <div class="end black">
-              <img src="../assets/img/ex-ed/logo-2-blanc-Centrale-Marseille-Executive-education.png" alt="logo">
-            </div>
-          </div>
-          <div class="col-span-full mt-6 mb-0">
-            <h3>Pictogrammes</h3>
-            <div class="grid grid-cols-6 gap-6">
-            <img class="light" src="../assets/img/ex-ed/picto-Centrale-Marseille-Executive-education.png" alt="picto">
-            <img class="exed" src="../assets/img/picto-blanc-zExcl.png" alt="picto">
-            <img class="light" src="../assets/img/ex-ed/picto-violet-Centrale-Marseille-Executive-education.png" alt="">
-            </div>
-          </div>
-          <div class="pt-6"><h2>Couleurs</h2></div>
-          <h3>Principales</h3>
-          <Couleurs :colors="colors"></Couleurs>
-          <h3>Secondaires</h3>
-          <Couleurs :colors="colors2"></Couleurs>
           <signature-med
               :logoWidth="134"
-              logoUrl="img/logo-ex-ed.png"
+              logoUrl="img/ExEd-med.svg"
+              padding="3"
               color1="#000f9f"
-              color2="#250e62">
+              color2="#8a1e41">
           </signature-med>
-          <Signature
-            class="pt-6"
-            logoUrl="img/logo-ex-ed.png"
-            :logoWidth="111"
-            :logoHeight="68"
-            color1="#000f9f"
-            color2="#250e62">
-          </Signature>
         </div>
       </div>
     </div>
