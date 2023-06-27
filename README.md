@@ -28,7 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 To deploy in signature-med folder on static server, use :
 ```
- vite build --base=/signature-med/
+ vite build --base=/signature/
 ```
 
 Default behaviour of `vite build` is:
