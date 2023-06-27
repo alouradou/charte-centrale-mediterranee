@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import('../views/Charte.vue')
     },
     {
+      path: '/marseille',
+      name: 'Centrale Marseille',
+      component: () => import('../views/Marseille.vue')
+    },
+    {
       path: '/fondation',
       name: 'La Fondation',
       component: () => import('../views/Fondation.vue')

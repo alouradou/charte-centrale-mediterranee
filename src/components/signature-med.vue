@@ -154,10 +154,10 @@ export default {
       return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
     styleA1: function () {
-      return 'color: '+this.color2+'; text-decoration: none;'
+      return 'color: '+this.color2+';'
     },
     styleA2: function () {
-      return 'color: '+this.color1+'; text-decoration: none;'
+      return 'color: '+this.color1+';'
     },
     styleInputMessageImp: function () {
       return 'background-color: '+this.color1+'; color: white;'
