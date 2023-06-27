@@ -25,12 +25,6 @@
               logoUrl="img/logo-med.svg"
               color1="#000f9f"
               color2="#4d5f80"></signature-med>
-          <signature
-            :logoWidth="101"
-            :logoHeight="53"
-            logoUrl="img/logo.png"
-            color1="#000f9f"
-            color2="#4d5f80"></signature>
         </div>
       </div>
     </div>
