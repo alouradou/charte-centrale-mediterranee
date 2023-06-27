@@ -39,7 +39,7 @@
               <p v-if="telephone1 === '' && telephone2 === ''" :style="style3"><a :style="styleA1" href="tel:+33491054647">tél. +33 (0)4 91 05 46 47</a></p>
             </div>
             <div style="padding-top: 10px;">
-              <p :style="style3"><a :style="styleA1" href="https://www.centrale-mediterranee.fr">https://centrale-mediterranee.fr</a></p>
+              <p :style="style3"><a :style="styleA2" href="https://www.centrale-mediterranee.fr">https://centrale-mediterranee.fr</a></p>
               <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
@@ -55,7 +55,7 @@
         <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
         <input class="line" type="text" v-model="messageImp" placeholder="Bandeau important" :style="styleInputMessageImp">
-        <input class="line" type="text" v-model="urlImp" placeholder="Url important" :style="styleInputMessageImp">
+        <input class="line" type="text" v-model="urlImp" placeholder="URL important" :style="styleInputMessageImp">
       </p>
       <div>
         <p>
@@ -144,19 +144,19 @@ export default {
       return 'padding: 4px 10px; margin: 0; font-size: 10pt; color: white; background-color:'+this.color1+'; font-family: Arial, sans-serif; font-weight: bold; margin-left:22px; width: fit-content;'
     },
     style1: function () {
-      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
-    },
-    style2: function () {
       return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
+    style2: function () {
+      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
     style3: function () {
-      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
     styleA1: function () {
-      return 'color: '+this.color1+'; text-decoration: none;'
+      return 'color: '+this.color2+'; text-decoration: none;'
     },
     styleA2: function () {
-      return 'color: '+this.color2+'; text-decoration: none;'
+      return 'color: '+this.color1+'; text-decoration: none;'
     },
     styleInputMessageImp: function () {
       return 'background-color: '+this.color1+'; color: white;'

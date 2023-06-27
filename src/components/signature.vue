@@ -42,7 +42,7 @@
         <input class="line" type="text" v-model="line4" placeholder="Bureau">
         <input class="line" type="text" v-model="telephone1" placeholder="téléphone 1">
         <input class="line" type="text" v-model="telephone2" placeholder="téléphone 2">
-      </p> 
+      </p>
       <div>
         <p>
           <input id="modifyRS" class="checkbox" type="checkbox" v-model="modifyRS">
@@ -62,7 +62,7 @@
       </div>
 
     </div>
-    
+
     <div class="text-smaller text-info py-0 my-0">
       <p class="text-valid">{{message}}</p>
       <p v-if="htmlVersion" ref="copyRawHtml">{{$refs.copySignature.innerHTML}}</p>
@@ -72,8 +72,8 @@
       <label class="px-2" for="checkHtml">code HTML (pour Thunderbird)</label>
       <p><button v-if="htmlVersion" class="info btn my-2" @click="doCopyHtml">Copier le code HTML</button></p>
     </div>
-    
-      
+
+
   </div>
 </template>
 
@@ -116,13 +116,13 @@ export default {
       : '/'
     },
     style1: function () {
-      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
-    },
-    style2: function () {
       return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
+    style2: function () {
+      return 'padding: 0; margin: 0; font-size: 10pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+    },
     style3: function () {
-      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color1+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
+      return 'padding: 0; margin: 0; font-size: 8pt; color:'+this.color2+'; font-family: Arial, sans-serif; padding-left: 22px; vertical-align: top;'
     },
     absolutePath: function () {
       return 'https://com.centrale-marseille.fr/charte_graphique/'
@@ -185,7 +185,7 @@ export default {
     },
     doCopyHtml: function () {
       this.validated = true;
-      this.selectText(this.$refs.copyRawHtml);  
+      this.selectText(this.$refs.copyRawHtml);
       document.execCommand("copy");
       this.message = 'code html copié'
     }
@@ -203,5 +203,5 @@ export default {
   .modifyRSinput input {
     width: 100%;
   }
-  
+
 </style>
