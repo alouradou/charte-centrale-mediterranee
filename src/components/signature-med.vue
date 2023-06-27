@@ -7,7 +7,7 @@
       <div class="resultat" ref="copySignature">
         <table>
           <td class="logo" style="padding: 10px">
-            <img alt="logo Centrale Mediterranée" :src="absolutePath+logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 9px;'" border="0">
+            <img alt="logo Centrale Mediterranée" :src="absolutePath+logoUrl" :width="logoWidth" style="'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; padding-bottom: 5px; padding-left: 0px;'" border="0">
             <a :href="urlImp">
               <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
                 <span>{{messageImp}}</span>
