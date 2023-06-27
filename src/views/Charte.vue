@@ -1,12 +1,25 @@
 <template>
   <div :id="$options.name">
-    <logo></logo>
+    <div class="container light">
+      <div class="content">
+        <div class="chapter">
+          <div>
+            <h1>Outils Centrale Méditerranée</h1>
+            <p>
+              Cet outil vous permettra de créer des signatures conformes à la charte graphique de Centrale Méditerranée.
+            <br/>
+              Retrouvez la plateforme de marque et la charte graphique à l'adresse ci-dessous.
+            </p>
+            <a class="btn valid" href="https://www.centrale-mediterranee.fr/fr/plateforme-de-marque-et-charte-graphique">
+              Plateforme de marque et charte graphique
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
-      <div class="content md:grid md:grid-cols-4 md:gap-6">
+      <div class="content">
         <div class="text col-span-3">
-          <logoDetail></logoDetail>
-          <typographie></typographie>
-          <couleurs></couleurs>
           <signature-med
               :logoWidth="134"
               logoUrl="img/logo-med.png"
@@ -18,9 +31,7 @@
             logoUrl="img/logo.png"
             color1="#000f9f"
             color2="#4d5f80"></signature>
-          <gabarits></gabarits>
         </div>
-        <menu2 class="sous-menu col-span-1"></menu2>
       </div>
     </div>
   </div>
@@ -28,13 +39,8 @@
 
 <script>
 import menu2 from '@/components/menu2.vue'
-import logo from '@/components/logo.vue'
-import logoDetail from '@/components/logo-details.vue'
-import typographie from '@/components/typographie.vue'
-import couleurs from '@/components/couleurs.vue'
 import signatureMed from '@/components/signature-med.vue'
 import signature from '@/components/signature.vue'
-import gabarits from '@/components/gabarits.vue'
 
 
 export default {
@@ -42,13 +48,8 @@ export default {
   name: 'Charte',
   components: {
     menu2,
-    logo,
-    logoDetail,
-    typographie,
-    couleurs,
     signatureMed,
-    signature,
-    gabarits
+    signature
   }
 }
 </script>

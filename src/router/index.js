@@ -5,12 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'La marque',
-      component: () => import("../views/Home.vue")
-    },
-    {
-      path: '/charte-graphique',
-      name: 'Charte graphique',
+      name: 'Centrale Méditerranée',
       component: () => import('../views/Charte.vue')
     },
     {
