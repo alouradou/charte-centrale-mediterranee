@@ -3,20 +3,14 @@
     <div class="container light">
       <div class="content">
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
-          <div>
-            <h1>
-              <img src="../assets/img/ex-ed/ExEd-med.svg" alt="logo Executive Education">
-            </h1>
-          </div>
+          <h1>
+            <img src="../assets/img/ex-ed/ExEd-med.svg"
+                 alt="logo Executive Education"
+                 style="max-width: 300px;"
+            >
+          </h1>
           <div class="pt-6">
-            <h3>Centrale Méditerranée et ses marques filles</h3>
-              <p>Toutes les activités portées par Centrale Méditerranée s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-              Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
-            <h3>Executive Education</h3>
-            <p>
-  Centrale Méditerranée Executive Education se différencie par un violet soutenu, teinte prestigieuse répandue dans le milieu de la formation continue.
-            </p>
-<!--            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>-->
+            <h1>Executive Education</h1>
           </div>
         </div>
       </div>

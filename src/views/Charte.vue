@@ -21,8 +21,9 @@
       <div class="content">
         <div class="text col-span-3">
           <signature-med
-              :logoWidth="150"
-              logoUrl="img/logo-med.svg"
+              :logoWidth="130"
+              logoUrl="img/logo-med.png"
+              padding="9"
               color1="#000f9f"
               color2="#4d5f80"></signature-med>
         </div>

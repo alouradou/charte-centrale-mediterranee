@@ -11,7 +11,7 @@
             <a :href="urlImp">
               <div v-if="messageImp" :style="style0" style="margin-top: 10px;">
                 <span>{{messageImp}}</span>
-                <img :style="styleArrow" border="0" width="7" height="7" :src="absolutePath+'img/fleche-puce-blanche.svg'" alt="Facebook">
+                <img :style="styleArrow" border="0" width="7" height="7" :src="absolutePath+'img/fleche-puce-blanche.png'" alt="Facebook">
               </div>
             </a>
             <div style="padding-top: 10px;" v-if="line1 || line2 || line3">
@@ -132,7 +132,7 @@ export default {
       validated: false,
       htmlVersion: false,
       styleImg: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-right: 6px; padding-bottom: 5px; float: left;',
-      styleArrow: 'font-family: sans-serif; color: #ffffff; font-size: 10px; display: block; border: 0px; margin-top: 3px; margin-left: 6px; padding-bottom: 5px; float: right;'
+      styleArrow: 'color: #ffffff; height:10pt ; margin-top: 3px; margin-left: 6px; float: right;'
     }
   },
   computed: {

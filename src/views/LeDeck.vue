@@ -3,18 +3,14 @@
     <div class="container light">
       <div class="content">
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
-          <div>
-            <h1>
-              <img src="../assets/img/le-deck/Le-Deck-med.svg" alt="logo Centrale Marseille Le Deck">
-            </h1>
-          </div>
+          <h1>
+            <img src="../assets/img/le-deck/Le-Deck-med.svg"
+                 alt="logo Centrale Marseille Le Deck"
+                 style="max-width: 300px;"
+            >
+          </h1>
           <div class="pt-6">
-            <h3>Centrale Méditerranée et ses marques filles</h3>
-              <p>Toutes les activités portées par Centrale Méditerranée s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-              Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
-            <h3>Le Deck</h3>
-            <p>À Centrale Méditerranée, entreprendre c’est faire germer des idées lumineuses et responsables. À mi-chemin entre le jaune et le vert clair, cette nuance fraiche reflète bien l’esprit de notre pré-incubateur qui forme nos élèves à imaginer demain.</p>
-<!--            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>-->
+            <h1>Le Deck</h1>
           </div>
         </div>
       </div>

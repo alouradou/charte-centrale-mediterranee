@@ -3,19 +3,14 @@
     <div class="container light">
       <div class="content">
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
-          <div>
-            <h1>
-              <img src="../assets/img/alumni/alumni-med.png" alt="logo Centrale Marseille Alumni">
-            </h1>
-          </div>
+          <h1>
+            <img src="../assets/img/alumni/alumni-med.png"
+                 alt="logo Centrale Marseille Alumni"
+                 style="max-width: 300px;"
+            >
+          </h1>
           <div class="pt-6">
-            <h3>Centrale Méditerranée et ses marques filles</h3>
-            <p>Toutes les activités portées par Centrale Méditerranée s'expriment à partir du logo principal. Une architecture de marque forte et monolithique renforce la cohérence au sein de l'école. Pour appuyer cette uniformité, les marques filles sont distinguées par une couleur unique.
-            Chaque couleur reflète la spécificité et les activités propres des marques filles. Pour autant que la nuance et l'intensité lumineuse s’accordent avec le bleu.</p>
-            <h3>Alumni</h3>
-            <p>L’orange de Centrale Méditerranée Alumni marque l’énergie bienveillante de l’association et reste le témoin des multiples souvenirs et histoires faits sur le campus car elle correspond exactement au orange de l’ancienne charte. Cette volonté de continuité marque la pérennité des engagements et des missions de l’association des diplômés de Centrale Méditerranée.
-            </p>
-<!--            <a class="btn valid" :href="path+'zip/centrale-marseille-charte-graphique.zip'">Kit à télécharger</a>-->
+            <h1>Alumni</h1>
           </div>
         </div>
       </div>
