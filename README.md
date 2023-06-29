@@ -2,31 +2,32 @@
 
 ## Project setup
 ```
-pnpm install
+npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-pnpm run serve
+npm run dev
+# or
+vite
 ```
 
 ### Compiles and minifies for production
 ```
-pnpm run build
+npm run build
+# or (see 'Production on static server' part)
+vite build
 ```
 
-### Lints and fixes files
+### Preview production
 ```
-pnpm run lint
+npm run preview
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### Production on static server
 
-To deploy in signature-med folder on static server, use :
+To deploy on `https://host/signature` on static server, use :
 ```
  vite build --base=/signature/
 ```
