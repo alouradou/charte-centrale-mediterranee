@@ -3,14 +3,14 @@
     <div class="container light">
       <div class="content">
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
-          <h1>
+          <div class="pt-6">
+            <h1>Executive Education</h1>
+          </div>
+          <div>
             <img src="../assets/img/ex-ed/ExEd-med.svg"
                  alt="logo Executive Education"
                  style="max-width: 300px;"
             >
-          </h1>
-          <div class="pt-6">
-            <h1>Executive Education</h1>
           </div>
         </div>
       </div>

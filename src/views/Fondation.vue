@@ -3,14 +3,14 @@
     <div class="container light">
       <div class="content">
         <div class="chapter md:grid md:grid-cols-2 md:gap-6">
+          <div class="pt-6">
+            <h1>La fondation</h1>
+          </div>
           <div>
             <img src="../assets/img/fondation/fondation-med.svg"
                  alt="logo Fondation Centrale Marseille"
                  style="max-width: 300px;"
             >
-          </div>
-          <div class="pt-6">
-            <h1>La fondation</h1>
           </div>
         </div>
       </div>
