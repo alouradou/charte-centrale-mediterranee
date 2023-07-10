@@ -163,8 +163,7 @@ export default {
       return 'background-color: '+this.color1+'; color: white;'
     },
     absolutePath: function () {
-      // return 'https://com.centrale-marseille.fr/charte_graphique/'
-      return 'https://alouradou.perso.centrale-marseille.fr/signature-med/'
+      return 'https://outils.centrale-marseille.fr/signature/'
     },
     tel1: function () {
       return 'tel:' + this.telephone1.split(' ').join('')
