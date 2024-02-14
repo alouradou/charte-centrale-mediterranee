@@ -40,7 +40,7 @@
             </div>
             <div style="padding-top: 10px;">
               <p :style="style3"><a :style="styleA2" href="https://www.centrale-mediterranee.fr">https://centrale-mediterranee.fr</a></p>
-              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="twitter" :href="twitter"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/twitter.png'" alt="twitter"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
+              <p :style="style3"><a v-if="facebook" :href="facebook"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/facebook.png'" alt="Facebook"></a> <a v-if="linkedin" :href="linkedin"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/linkedin.png'" alt="linkedin"></a> <a v-if="youtube" :href="youtube"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/youtube.png'" alt="youtube"></a> <a v-if="instagram" :href="instagram"><img :style="styleImg" border="0" width="16" height="16" :src="absolutePath+'img/instagram.png'" alt="instagram"></a></p>
             </div>
           </td>
         </table>
@@ -70,7 +70,6 @@
         </p>
         <p v-if="modifyRS" class="modifyRSinput pb-6">
           <input class="line" type="text" v-model="facebook" placeholder="facebook">
-          <input class="line" type="text" v-model="twitter" placeholder="twitter">
           <input class="line" type="text" v-model="instagram" placeholder="instagram">
           <input class="line" type="text" v-model="linkedin" placeholder="linkedin">
           <input class="line" type="text" v-model="youtube" placeholder="youtube">
@@ -124,7 +123,6 @@ export default {
       messageImp: '',
       urlImp: '',
       facebook: 'https://www.facebook.com/CentraleMediterranee',
-      twitter: 'https://twitter.com/centrale_med',
       linkedin: 'https://www.linkedin.com/school/centralemediterranee/',
       instagram: 'https://www.instagram.com/centralemed/',
       youtube: 'https://www.youtube.com/user/CentraleMarseille/featured',
