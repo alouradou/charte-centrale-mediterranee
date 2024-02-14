@@ -24,7 +24,7 @@ const router = createRouter({
       component: () => import('../views/Alumni.vue')
     },
     {
-      path: '/exectutive-education',
+      path: '/executive-education',
       name: 'Executive Education',
       component: () => import('../views/ExEd.vue')
     },
