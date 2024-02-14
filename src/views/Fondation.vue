@@ -20,10 +20,10 @@
         <div class="text col-span-3">
           <signature-med
               :logoWidth="134"
-              logoUrl="img/fondation-med.svg"
+              logoUrl="img/fondation-med.png"
               padding="3"
               color1="#000f9f"
-              color2="#4d5f80">
+              color2="#5093FF">
           </signature-med>
         </div>
       </div>
