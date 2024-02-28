@@ -45,7 +45,7 @@ export default {
   computed: {
     path: function () {
       return process.env.NODE_ENV === 'production'
-        ? '/charte_graphique/'
+        ? '/signature/'
         : '/'
     }
   },
