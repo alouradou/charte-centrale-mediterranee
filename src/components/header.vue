@@ -18,7 +18,7 @@
                 <router-link to="/fondation">La fondation</router-link>
               </li>
               <li>
-                <router-link to="/exectutive-education">Executive Education</router-link>
+                <router-link to="/executive-education">Executive Education</router-link>
               </li>
               <li>
                 <router-link to="/le-deck">Le Deck</router-link>
